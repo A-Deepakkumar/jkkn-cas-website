@@ -65,6 +65,34 @@ export default function BScComputerSciencePage() {
   const [activeYear, setActiveYear] = useState(1);
   const [activeFAQ, setActiveFAQ] = useState(0);
 
+  // Faculty data
+  const facultyMembers = [
+    {
+      name: "Dr. Rajesh Kumar",
+      designation: "Head of Department",
+      education: "Ph.D. in Computer Science",
+      image: "/images/faculties/placeholder-avatar.jpg"
+    },
+    {
+      name: "Dr. Priya Sundaram",
+      designation: "Associate Professor",
+      education: "Ph.D. in Artificial Intelligence",
+      image: "/images/faculties/placeholder-avatar.jpg"
+    },
+    {
+      name: "Mr. Vikram Subramanian",
+      designation: "Assistant Professor",
+      education: "M.Tech., Industry Expert",
+      image: "/images/faculties/placeholder-avatar.jpg"
+    },
+    {
+      name: "Ms. Anitha Ramachandran",
+      designation: "Assistant Professor",
+      education: "M.Phil., Research Scholar",
+      image: "/images/faculties/placeholder-avatar.jpg"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
@@ -76,7 +104,7 @@ export default function BScComputerSciencePage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Science in{' '}
                 <span className="text-brand-green">
                   Computer Science
@@ -102,7 +130,7 @@ export default function BScComputerSciencePage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -122,7 +150,7 @@ export default function BScComputerSciencePage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '15:1', title: 'Learner-Facilitator Ratio', desc: 'Personalized attention' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '95%+', title: 'Placement Record', desc: 'Career opportunities assured' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Career opportunities assured' },
               { icon: <Award className="w-7 h-7" />, stat: '₹5L', title: 'Average Package', desc: 'Competitive starting salary' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -172,13 +200,13 @@ export default function BScComputerSciencePage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Computer+Science+Lab"
+                  src="/images/faculties/self/cs/JKKN B.Sc Computer Science.png"
                   alt="Computer Science Laboratory"
                   className="w-full h-auto"
                 />
-                <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
-                </span>
+                {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                  Since 1952
+                </span> */}
               </div>
             </RevealSection>
           </div>
@@ -219,7 +247,7 @@ export default function BScComputerSciencePage() {
                 {
                   icon: <BookOpen className="w-8 h-8 text-white" />,
                   title: 'Documents Required',
-                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy']
+                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy', 'Income Certificate', 'Bank Details']
                 }
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 150}>
@@ -270,8 +298,8 @@ export default function BScComputerSciencePage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -285,11 +313,25 @@ export default function BScComputerSciencePage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Programming in C', 'Digital Computer Fundamentals', 'Mathematical Foundations', 'Practical: C Programming Lab', 'Allied Mathematics I', 'Environmental Studies']
+                    subjects: [
+                      '25UGTA01 - General Tamil-I',
+                      '25UGEN01 - General English-I',
+                      '25UCSC01 - Core - I - Python Programming',
+                      '25UCSCP01 - Core Practical – I - Python Programming Lab',
+                      '25UCSNM1 - NME - I - Digital Advertising and Strategies',
+                      '25UCSS01 - SEC – I Computer Science with AI Acceleration – Foundations'
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Object Oriented Programming with C++', 'Data Structures', 'Operating Systems Concepts', 'Practical: Data Structures Lab', 'Allied Mathematics II', 'Value Education']
+                    subjects: [
+                      '25UGTA02 - General Tamil-II',
+                      '25UGEN02 - General English-II',
+                      '25UCSC02 - Core – II - Data Structure and Algorithms',
+                      '25UCSCP02 - Core Practical - II - Data Structure and Algorithms Lab',
+                      '25UCSNM2 - NME - II - Digital Skills for Employability',
+                      '25UCSS02 - SEC – II - Computer Science with AI Acceleration Implementation'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -318,11 +360,29 @@ export default function BScComputerSciencePage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Java Programming', 'Database Management Systems', 'Computer Networks', 'Practical: Java Programming Lab', 'Allied Statistics I', 'Soft Skills Development']
+                    subjects: [
+                      '24UGTA03 - General Tamil – III',
+                      '24UGEN03 - General English – III',
+                      '24UCSC03 - Core - III – Microprocessor and Microcontroller',
+                      '24UCSCP03 - Core Practical - III – Microprocessor and Microcontroller Lab',
+                      '24USTAGE1 - Generic Elective – III: Statistical Methods and its Applications - I',
+                      '24UCSS03 - SEC III – Web Designing',
+                      '24UCSS04 - SEC IV – Advanced Excel',
+                      '24UEVS01 - Environmental Studies'
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Python Programming', 'Software Engineering', 'Web Technologies', 'Practical: DBMS & Web Lab', 'Allied Statistics II', 'Extension Activities']
+                    subjects: [
+                      '24UGTA04 - General Tamil – IV',
+                      '24UGEN04 - General English – IV',
+                      '24UCSC04 - Core-IV – Java Programming',
+                      '24UCSCP04 - Core Practical – IV – Java Programming Lab',
+                      '24USTAGE2 - Generic Elective – IV: Statistical Methods and its Applications - II',
+                      '24UCSS05 - SEC V – PHP Programming',
+                      '24UCSS06 - SEC VI – Multimedia Systems',
+                      '24UEVS01 - Environmental Studies'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -351,11 +411,28 @@ export default function BScComputerSciencePage() {
                 {[
                   {
                     title: 'Semester V',
-                    subjects: ['Design & Analysis of Algorithms', 'Artificial Intelligence', 'Cloud Computing', 'Mobile Application Development', 'Practical: Python & AI Lab', 'Elective: Data Science / IoT']
+                    subjects: [
+                      '23UCSCC05 - CC9 - Software Engineering',
+                      '23UCSCC06 - CC10 - Database Management System',
+                      '23UCSCCP05 - CC11 - Practical: Database Management System Lab',
+                      'Elective Course - EC5 (Discipline Specific)',
+                      'Elective Course - EC6 (Discipline Specific)',
+                      '23UCSCCPR1 - CC12 - Project with Viva voce',
+                      'Value Education',
+                      'Internship / Industrial Training'
+                    ]
                   },
                   {
                     title: 'Semester VI',
-                    subjects: ['Machine Learning', 'Cybersecurity Fundamentals', 'Big Data Analytics', 'Research Methodology', 'Project Work & Viva', 'Elective: Blockchain / DevOps']
+                    subjects: [
+                      '23UCSCC07 - CC13 - Computer Networks',
+                      '23UCSCC08 - CC14 - .NET Programming',
+                      '23UCSCCP06 - CC15 - Practical: .NET Programming Lab',
+                      'Elective Course – EC7 (Discipline Specific)',
+                      'Elective Course – EC8 (Discipline Specific)',
+                      'Skill Enhancement Course - SEC8',
+                      'Extension Activity'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -542,34 +619,13 @@ export default function BScComputerSciencePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Campus+Life"
-                  alt="Campus Life"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -630,15 +686,17 @@ export default function BScComputerSciencePage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Rajesh Kumar', designation: 'Head of Department', qualification: 'Ph.D. in Computer Science' },
-                { name: 'Dr. Priya Sundaram', designation: 'Associate Professor', qualification: 'Ph.D. in Artificial Intelligence' },
-                { name: 'Mr. Vikram Subramanian', designation: 'Assistant Professor', qualification: 'M.Tech., Industry Expert' },
-                { name: 'Ms. Anitha Ramachandran', designation: 'Assistant Professor', qualification: 'M.Phil., Research Scholar' }
+                { name: 'Dr.n.chandrakala', designation: 'Head of Department', qualification: 'M.SC.,M.PHIL.,PH.D', image: '/images/faculties/DR.N.CHANDRAKALA-300x199.png' },
+                { name: 'Mrs.P.Priyanka', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil.,B.Ed.,', image: '/images/faculties/Mrs.P.Priyanka-300x199.png' },
+                { name: 'Mrs.P.Kowsalya', designation: 'Assistant Professor', qualification: 'M.C.A.,', image: '/images/faculties/Mrs.P.Kowsalya-300x199.png' },
+                { name: 'Mrs.A.Vennila', designation: 'Assistant Professor', qualification: 'M.C.A.,', image: '/images/faculties/Mrs.A.Vennila-300x199.png' },
+                { name: 'Mr.R.Pugalendhi', designation: 'Assistant Professor', qualification: 'M.Sc.,', image: '/images/faculties/MR.R.PUGALENDHI-300x199.png' },
+                { name: 'Mrs.D.Savietha', designation: 'Assistant Professor', qualification: ' M.SC (CS).,', image: '/images/faculties/MRS.D.SAVIETHA-300x199.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image || '/images/faculties/placeholder-avatar.jpg'}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -740,62 +798,7 @@ export default function BScComputerSciencePage() {
         </div>
       </section>
 
-      {/* Related Programmes */}
-      <section className="py-16 bg-brand-cream">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <RevealSection>
-              <div className="text-center mb-12">
-                <SectionBadge text="Explore More" />
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Explore Related{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
-                    Programmes
-                  </span>
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Discover other technology programmes at our college
-                </p>
-              </div>
-            </RevealSection>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { title: 'BCA', description: 'Bachelor of Computer Applications with focus on software development and applications', duration: '3 Years', image: 'https://placehold.co/400x180/0b6d41/FFFFFF?text=BCA' },
-                { title: 'B.Sc Mathematics', description: 'Pure and applied mathematics with computational methods and analysis', duration: '3 Years', image: 'https://placehold.co/400x180/059669/FFFFFF?text=BSc+Mathematics' },
-                { title: 'B.Sc Physics', description: 'Fundamental physics with electronics and computational physics components', duration: '3 Years', image: 'https://placehold.co/400x180/0b6d41/FFFFFF?text=BSc+Physics' }
-              ].map((programme, idx) => (
-                <RevealSection key={idx} delay={idx * 150}>
-                  <a href="#" className="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group">
-                    <div className="relative h-44 overflow-hidden">
-                      <img
-                        src={programme.image}
-                        alt={programme.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-green/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-brand-green mb-2 group-hover:text-emerald-500 transition-colors">{programme.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{programme.description}</p>
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{programme.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          <span>Full-time</span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

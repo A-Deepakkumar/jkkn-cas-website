@@ -100,7 +100,6 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
         label: 'Aided PG',
         items: [
           { label: 'MCA', href: '/programmes/aided/pg/mca' },
-          { label: 'M.A. English', href: '/programmes/aided/pg/ma-english' },
           { label: 'M.Sc. Chemistry', href: '/programmes/aided/pg/msc-chemistry' },
           { label: 'M.Sc. Mathematics', href: '/programmes/aided/pg/msc-maths' },
           { label: 'M.Com', href: '/programmes/aided/pg/mcom' },
@@ -124,6 +123,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
           { label: 'BCA', href: '/programmes/self-finance/ug/bca' },
           { label: 'B.Sc. IT', href: '/programmes/self-finance/ug/bsc-it' },
           { label: 'B.Sc. CS', href: '/programmes/self-finance/ug/bsc-cs' },
+          { label: 'B.Sc. AI & DS', href: '/programmes/self-finance/ug/bsc-ai-ds' },
           { label: 'B.Com CA', href: '/programmes/self-finance/ug/bcom-ca' },
         ],
       },
@@ -132,6 +132,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
         label: 'Self-Finance PG',
         items: [
           { label: 'MBA', href: '/programmes/self-finance/pg/mba' },
+          { label: 'M.A. English', href: '/programmes/self-finance/pg/ma-english' },
           { label: 'M.Sc. IT', href: '/programmes/self-finance/pg/msc-it' },
           { label: 'M.Sc. CS', href: '/programmes/self-finance/pg/msc-cs' },
         ],
@@ -246,9 +247,21 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
             href: '/aicte',
             description: 'AICTE approval and compliance',
           },
+          {
+            label: 'AICTE Feedback',
+            href: 'https://www.aicte.gov.in/feedback/index.php',
+            description: 'Submit feedback through the official AICTE portal',
+          },
         ],
       },
     ],
+  },
+
+  // Contact - Simple link
+  {
+    id: 'contact',
+    label: 'Contact',
+    href: '/contact',
   },
 
   // More - Mega Dropdown
@@ -293,15 +306,17 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
             label: 'NIRF 2025',
             href: '/documents/nirf/NIRF-2025-COLLEGE.pdf',
           },
-        ],
-      },
-      {
-        id: 'contact',
-        label: 'Contact',
-        items: [
           {
-            label: 'Contact Us',
-            href: '/contact',
+            label: 'NIRF 2026 - College',
+            href: '/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-college.pdf',
+          },
+          {
+            label: 'NIRF 2026 - Overall',
+            href: '/documents/nirf/J.K.K Nataraja College of Arts & Science20260402- Overall.pdf',
+          },
+          {
+            label: 'NIRF 2026 - Sustainable Institution',
+            href: '/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-  Sustainable Institutions.pdf',
           },
         ],
       },

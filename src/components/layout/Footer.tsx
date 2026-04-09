@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Left Column - College Info & Map */}
           <div>
             <h3 className="text-xl font-bold mb-4 border-b-2 border-brand-yellow pb-2 inline-block">
-              J.K.K NATARAJA COLLEGE OF ARTS & SCIENCE
+              JKKN College of Arts and Science
             </h3>
 
             {/* Map Embed */}
@@ -39,32 +39,50 @@ export default function Footer() {
               OUR INSTITUTIONS
             </h3>
             <ul className="space-y-3 mt-6">
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN Dental College and Hospital
+              <li>
+                <a href="https://dental.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN Dental College & Hospital
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN College of Allied Health Sciences
+              <li>
+                <a href="https://ahs.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN College of Allied Health Sciences
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN College of Pharmacy
+              <li>
+                <a href="https://pharmacy.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN College of Pharmacy
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                Sresakthimayeil Institute of Nursing and Research
+              <li>
+                <a href="https://nursing.sresakthimayeil.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  Sresakthimayeil Institute of Nursing and Research
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN College of Education
+              <li>
+                <a href="https://edu.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN College of Education
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN College of Arts and Science (Autonomous)
+              <li>
+                <a href="https://cas.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN College of Arts and Science (Autonomous)
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN College of Engineering and Technology
+              <li>
+                <a href="https://engg.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN College of Engineering and Technology
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                JKKN Matriculation Higher Secondary School
+              <li>
+                <a href="https://school.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  JKKN Matriculation Higher Secondary School
+                </a>
               </li>
-              <li className="hover:text-brand-yellow transition cursor-pointer">
-                Nattraja Vidyalaya
+              <li>
+                <a href="https://nv.jkkn.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition">
+                  Nattraja Vidhyalaya
+                </a>
               </li>
             </ul>
           </div>
@@ -90,7 +108,7 @@ export default function Footer() {
               <div>
                 <span className="font-semibold">Address:</span>
                 <p className="mt-2 leading-relaxed">
-                  J.K.K NATARAJA COLLEGE OF ARTS & SCIENCE .NH-544 (Salem To Coimbatore National Highway), Kumarapalayam (TK), Namakkal (DT). Tamil Nadu. 638183.
+                  JKKN College of Arts and Science, NH-544 (Salem To Coimbatore National Highway), Komarapalayam (TK), Namakkal (DT). Tamil Nadu. 638183.
                 </p>
               </div>
             </div>
@@ -102,35 +120,36 @@ export default function Footer() {
               </h3>
               <div className="flex gap-4 mt-6">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/jkknarts"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/jkknarts"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/school/jkknarts"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.youtube.com/watch?v=yxvebMX0R8I&list=PL6QsTq-__HhsywKQN5jOeRSMJVyUuV8Ve"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition"
                   aria-label="YouTube"
                 >

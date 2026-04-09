@@ -76,7 +76,7 @@ export default function MComAidedPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Master of{' '}
                 <span className="text-brand-green">
                   Commerce
@@ -107,7 +107,7 @@ export default function MComAidedPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -127,7 +127,7 @@ export default function MComAidedPage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '12:1', title: 'Learner-Facilitator Ratio', desc: 'Enhanced personal attention' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '98%+', title: 'Placement Record', desc: 'Premium career opportunities' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Premium career opportunities' },
               { icon: <Award className="w-7 h-7" />, stat: '₹6.5L', title: 'Average Package', desc: 'Higher starting salary' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -182,7 +182,7 @@ export default function MComAidedPage() {
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 1952
                 </span>
               </div>
             </RevealSection>
@@ -275,8 +275,8 @@ export default function MComAidedPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -291,23 +291,23 @@ export default function MComAidedPage() {
                   {
                     title: 'Semester I',
                     subjects: [
-                      { name: 'Advanced Financial Accounting', code: 'MCO101' },
-                      { name: 'Managerial Economics', code: 'MCO102' },
-                      { name: 'Organizational Behaviour', code: 'MCO103' },
-                      { name: 'Business Research Methods', code: 'MCO104' },
-                      { name: 'Statistical Analysis for Business', code: 'MCO105' },
-                      { name: 'Corporate Governance & Ethics', code: 'MCO106' }
+                      { name: 'Business Finance', code: '' },
+                      { name: 'Digital Marketing', code: '' },
+                      { name: 'Banking and Insurance', code: '' },
+                      { name: 'Security Analysis and Portfolio Management / Operations Research', code: '' },
+                      { name: 'Labour Laws / Strategic Human Resource Management', code: '' }
                     ]
                   },
                   {
                     title: 'Semester II',
                     subjects: [
-                      { name: 'Advanced Cost & Management Accounting', code: 'MCO201' },
-                      { name: 'Financial Management', code: 'MCO202' },
-                      { name: 'Corporate Tax Planning', code: 'MCO203' },
-                      { name: 'Strategic Management', code: 'MCO204' },
-                      { name: 'E-Business & Digital Commerce', code: 'MCO205' },
-                      { name: 'Advanced Business Law', code: 'MCO206' }
+                      { name: 'Strategic Cost Management', code: '' },
+                      { name: 'Corporate Accounting', code: '' },
+                      { name: 'Setting up of Business Entities', code: '' },
+                      { name: 'Business Ethics and Corporate Sustainability / Audit and Due Diligence', code: '' },
+                      { name: 'Rural and Agricultural Marketing / Logistics and Supply Chain Management', code: '' },
+                      { name: 'Business Environment', code: '' },
+                      { name: 'Fundamental Study of Human Rights', code: '' }
                     ]
                   }
                 ].map((sem, idx) => (
@@ -341,23 +341,24 @@ export default function MComAidedPage() {
                   {
                     title: 'Semester III',
                     subjects: [
-                      { name: 'Advanced Auditing & Assurance', code: 'MCO301' },
-                      { name: 'International Financial Management', code: 'MCO302' },
-                      { name: 'Investment Analysis & Portfolio Management', code: 'MCO303' },
-                      { name: 'Elective I: Banking & Financial Services', code: 'MCO304' },
-                      { name: 'Elective II: GST & Indirect Taxation', code: 'MCO305' },
-                      { name: 'Summer Internship / Field Study', code: 'INT301' }
+                      { name: 'Taxation', code: '' },
+                      { name: 'Research Methodology', code: '' },
+                      { name: 'Computer Applications in Business (Practical)', code: '' },
+                      { name: 'International Business', code: '' },
+                      { name: 'Strategic Management / International Financial Management', code: '' },
+                      { name: 'Business Communication', code: '' },
+                      { name: 'Internship / Industrial Activity', code: '' }
                     ]
                   },
                   {
                     title: 'Semester IV',
                     subjects: [
-                      { name: 'Financial Derivatives & Risk Management', code: 'MCO401' },
-                      { name: 'Advanced Business Analytics', code: 'MCO402' },
-                      { name: 'Elective III: Mergers, Acquisitions & Corporate Restructuring', code: 'MCO403' },
-                      { name: 'Elective IV: Forensic Accounting', code: 'MCO404' },
-                      { name: 'Comprehensive Viva-Voce', code: 'MCO405' },
-                      { name: 'Dissertation / Project Work', code: 'PRJ401' }
+                      { name: 'Corporate and Economic Laws', code: '' },
+                      { name: 'Human Resource Analytics', code: '' },
+                      { name: 'Project with Viva-Voce', code: '' },
+                      { name: 'Organizational Behaviour / Insolvency Law and Practice', code: '' },
+                      { name: 'E-filing of GST Return', code: '' },
+                      { name: 'Extension Activity', code: '' }
                     ]
                   }
                 ].map((sem, idx) => (
@@ -636,34 +637,13 @@ export default function MComAidedPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Campus+Life"
-                  alt="Campus Life"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -725,15 +705,19 @@ export default function MComAidedPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Meenakshi Sundaram', designation: 'Head of Department', qualification: 'Ph.D. in Commerce' },
-                { name: 'Dr. Lakshmi Narayanan', designation: 'Associate Professor', qualification: 'Ph.D. in Finance' },
-                { name: 'Ms. Priya Ramachandran', designation: 'Assistant Professor', qualification: 'M.Phil., NET Qualified' },
-                { name: 'Mr. Karthik Subramanian', designation: 'Assistant Professor', qualification: 'M.Com., CA (Inter)' }
+                { name: 'Dr. S. Gokila', designation: 'Associate Professor & Head', qualification: 'M.Com., M.Phil., PGDCA., Ph.D.', image: '/images/faculties/aided/bcom/Dr.-S.-Gokila-240x300.png' },
+                { name: 'Dr. V. K. Sasikala', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., PGDCA', image: '/images/faculties/aided/bcom/Dr.-V.-K.-Sasikala-240x300.png' },
+                { name: 'Dr. M. Boovathi', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., PGDCA., Ph.D., NET', image: '/images/faculties/aided/bcom/Dr.-M.-Boovathi-240x300.png' },
+                { name: 'Dr. S. Thenmozhi', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., PGDCA., M.B.A., SET', image: '/images/faculties/aided/bcom/Dr.-S.-Thenmozhi-240x300.png' },
+                { name: 'Dr. L. Kavitha', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., SET', image: '/images/faculties/aided/bcom/Dr.-L.-Kavitha-240x300.png' },
+                { name: 'Dr. S. V. Ramesh', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., NET', image: '/images/faculties/aided/bcom/Dr.-S.-V.-Ramesh-240x300.png' },
+                { name: 'Dr. R. Mubeen', designation: 'Assistant Professor', qualification: 'M.Com (CA)., M.Phil., Ph.D.', image: '/images/faculties/aided/bcom/Dr.-R.-Mubeen-240x300.png' },
+                { name: 'Dr. S. Pavithra', designation: 'Assistant Professor', qualification: 'M.Com (CA)., B.Ed., M.Phil., Ph.D., SET', image: '/images/faculties/aided/bcom/Dr.-S.-Pavithra-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"

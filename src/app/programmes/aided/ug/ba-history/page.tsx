@@ -76,12 +76,12 @@ export default function BAHistoryPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Arts in{' '}
                 <span className="text-brand-green">
                   History
                 </span>{' '}
-                (Honours)
+
               </h1>
               <p className="text-xl md:text-2xl font-medium mb-6 text-gray-700">
                 Explore the Past, Shape the Future
@@ -103,7 +103,7 @@ export default function BAHistoryPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -123,7 +123,7 @@ export default function BAHistoryPage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '15:1', title: 'Learner-Facilitator Ratio', desc: 'Personalized attention' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '85%+', title: 'Placement Record', desc: 'Civil services & careers' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Civil services & careers' },
               { icon: <Award className="w-7 h-7" />, stat: '500+', title: 'UPSC Selections', desc: 'Successful alumni' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -154,7 +154,7 @@ export default function BAHistoryPage() {
                 </span>
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                The Bachelor of Arts in History (Honours) is a comprehensive three-year undergraduate programme designed to develop critical thinking, analytical skills, and deep understanding of historical events, civilizations, and their impact on contemporary society. This UGC-recognized programme offers an in-depth study of ancient, medieval, and modern history with special focus on Indian and World History.
+                The Bachelor of Arts in History is a comprehensive three-year undergraduate programme designed to develop critical thinking, analytical skills, and deep understanding of historical events, civilizations, and their impact on contemporary society. This UGC-recognized programme offers an in-depth study of ancient, medieval, and modern history with special focus on Indian and World History.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Students engage with primary sources, archaeological evidence, and historiographical debates while developing research methodologies essential for historical scholarship. The curriculum combines theoretical knowledge with practical fieldwork, heritage site visits, and archival research training, preparing graduates for competitive examinations like UPSC Civil Services, careers in teaching, research, museums, archaeology, and heritage management.
@@ -173,12 +173,12 @@ export default function BAHistoryPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=History+Archive+Library"
+                  src="/images/programmes/ba-history/Bachelor of Arts in History.png"
                   alt="History Archive Library"
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 1975
                 </span>
               </div>
             </RevealSection>
@@ -200,7 +200,7 @@ export default function BAHistoryPage() {
                   </span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Requirements for joining the BA History (Honours) programme
+                  Requirements for joining the BA History programme
                 </p>
               </div>
             </RevealSection>
@@ -220,7 +220,7 @@ export default function BAHistoryPage() {
                 {
                   icon: <BookOpen className="w-8 h-8 text-white" />,
                   title: 'Documents Required',
-                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy']
+                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy', 'Income Certificate', 'Bank Passbook Xerox']
                 }
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 150}>
@@ -271,8 +271,8 @@ export default function BAHistoryPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -286,11 +286,28 @@ export default function BAHistoryPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Ancient Indian History & Culture', 'World History: Renaissance to Industrial Revolution', 'Introduction to Historical Methods', 'Archaeology & Epigraphy', 'Language Paper I', 'Environmental Studies']
+                    subjects: [
+                      { code: '24UGTA01', title: 'General Tamil – I' },
+                      { code: '24UGEN01', title: 'General English –I' },
+                      { code: '24UHIC01', title: 'Core – I: History of Ancient India upto 1206 CE' },
+                      { code: '24UHIC02', title: 'Core – II: History of Tamil Nadu upto 1311 CE' },
+                      { code: '24UHIDE1', title: 'Generic Elective Course-1: Geography of India' },
+                      { code: '24UHINM1', title: 'NME – I: Indian Polity' },
+                      { code: '24UHIS01', title: 'SEC-I: Introduction to Tourism' }
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Medieval Indian History', 'World History: World Wars & Post-War Era', 'Historiography', 'Art & Architecture in India', 'Language Paper II', 'Value Education']
+                    subjects: [
+                      { code: '24UGTA02', title: 'General Tamil – II' },
+                      { code: '24UGEN02', title: 'General English – II' },
+                      { code: '24UHIC03', title: 'Core - III: History of Medieval India 1206-1707 CE' },
+                      { code: '24UHIC04', title: 'Core – IV: History of Tamil Nadu 1311 -1801 CE' },
+                      { code: '24UHIDE2', title: 'Generic Elective Course-2: Geography of Tamil Nadu' },
+                      { code: '24UHINM2', title: 'NME – II: Basic Journalism' },
+                      { code: '25UHIS02', title: 'SEC - II: Indian Constitution' },
+                      { code: '25UDIM01', title: 'Disaster Management' }
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -301,9 +318,10 @@ export default function BAHistoryPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="text-gray-700">
+                              <span className="font-semibold text-brand-green">{subject.code}</span>
+                              <br />
+                              <span className="text-sm">{subject.title}</span>
                             </li>
                           ))}
                         </ul>
@@ -319,11 +337,30 @@ export default function BAHistoryPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Modern Indian History (1757-1947)', 'History of USA', 'Social & Economic History of India', 'Heritage Management', 'Allied Paper I', 'Skill Enhancement Course I']
+                    subjects: [
+                      { code: '24UGTA03', title: 'General Tamil – III' },
+                      { code: '24UGEN03', title: 'General English –III' },
+                      { code: '24UHIC05', title: 'Core - V: History of India from 1707 CE to 1857 CE' },
+                      { code: '24UHIC06', title: 'Core - VI: History of Tamil Nadu since 1801 CE' },
+                      { code: '24UHIDE3', title: 'Generic Elective Course-III: Indian Economy Problems and Policies –I' },
+                      { code: '24UHIS03', title: 'SEC-III: Museology' },
+                      { code: '24UHIS04/05', title: 'SEC-IV: Basic Concepts of Archaeology / IKS in Architecture and Town Planning' },
+                      { code: '24UEVS01', title: 'EVS' },
+                      { code: '24UHAWP01', title: 'Health & Wellness' }
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Contemporary India (1947-Present)', 'History of China & Japan', 'Women in History', 'Museum & Archive Management', 'Allied Paper II', 'Skill Enhancement Course II']
+                    subjects: [
+                      { code: '24UGTA04', title: 'General Tamil – IV' },
+                      { code: '24UGEN04', title: 'General English – IV' },
+                      { code: '24UHIC07', title: 'Core - VII: Freedom Struggle in India' },
+                      { code: '24UHIC08', title: 'Core - VIII: History of Modern Europe from 1789 CE to 1919 CE' },
+                      { code: '24UHIDE4', title: 'Generic Elective Course-IV: Indian Economy Problems and Policies –II' },
+                      { code: '24UHIS06', title: 'SEC – V: Computer Training' },
+                      { code: '24UHIS07', title: 'SEC - VI: Introduction to Journalism' },
+                      { code: '24UEVS01', title: 'EVS' }
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -334,9 +371,10 @@ export default function BAHistoryPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="text-gray-700">
+                              <span className="font-semibold text-brand-green">{subject.code}</span>
+                              <br />
+                              <span className="text-sm">{subject.title}</span>
                             </li>
                           ))}
                         </ul>
@@ -352,11 +390,28 @@ export default function BAHistoryPage() {
                 {[
                   {
                     title: 'Semester V',
-                    subjects: ['History of Tamil Nadu', 'Research Methodology', 'Public History & Digital Humanities', 'History of Science & Technology', 'Elective Paper I', 'Extension Activities']
+                    subjects: [
+                      { code: '24UHIC09', title: 'Core – IX History of the World Since 1919 to 2020 CE' },
+                      { code: '24UHIC10', title: 'Core – X Selected Themes in History of U.S.A' },
+                      { code: '24UHIC11', title: 'Core – XI: Regional History (History of Kongu Nadu)' },
+                      { code: '24UHIPR1', title: 'Core – XII: Project (With viva voce)' },
+                      { code: '24UHIED5', title: 'Discipline Specific Course-V: Elements of Human Rights' },
+                      { code: '24UHIED6', title: 'Discipline Specific Elective VI: History of Dravidian Movements' },
+                      { code: '24UVED01', title: 'Value Education' },
+                      { code: '24UHIIN01', title: 'Summer Internship /Ind. Training' }
+                    ]
                   },
                   {
                     title: 'Semester VI',
-                    subjects: ['Indian Freedom Movement', 'International Relations (20th Century)', 'Tourism & Cultural Heritage', 'Project Work / Dissertation', 'Elective Paper II', 'Internship / Field Study']
+                    subjects: [
+                      { code: '24UHIC13', title: 'Core – XIII Contemporary History of India' },
+                      { code: '24UHIC14', title: 'Core – XIV India and Her Neighbours' },
+                      { code: '24UHIC15', title: 'Core – XV: History of Science and Technology in India' },
+                      { code: '24UHIED7', title: 'Discipline Specific Elective VII: International Relations since 1919' },
+                      { code: '24UHIED8', title: 'Discipline Specific Elective VIII: History of China and Japan Since 1900 CE' },
+                      { code: '24UHIPC1', title: 'General Studies for Competitive Examination' },
+                      { code: '24UEXA01', title: 'Extension Activity' }
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -367,9 +422,10 @@ export default function BAHistoryPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="text-gray-700">
+                              <span className="font-semibold text-brand-green">{subject.code}</span>
+                              <br />
+                              <span className="text-sm">{subject.title}</span>
                             </li>
                           ))}
                         </ul>
@@ -450,7 +506,7 @@ export default function BAHistoryPage() {
                 { icon: <Landmark className="w-6 h-6" />, title: 'Civil Services', desc: 'IAS, IPS, IFS, and State Civil Services through UPSC/TNPSC' },
                 { icon: <GraduationCap className="w-6 h-6" />, title: 'History Teacher', desc: 'Teach history at schools after completing B.Ed.' },
                 { icon: <Building2 className="w-6 h-6" />, title: 'Museum Curator', desc: 'Manage collections and exhibitions in museums' },
-                { icon: <MapPin className="w-6 h-6" />, title: 'Archaeologist', desc: 'Excavate and analyze historical sites and artifacts' },
+                { icon: <MapPin className="w-6 h-6" />, title: 'Archaeologist', desc: 'Excavate and analyze historical sites and artefacts' },
                 { icon: <Library className="w-6 h-6" />, title: 'Archivist', desc: 'Preserve and organize historical records and documents' },
                 { icon: <FileText className="w-6 h-6" />, title: 'Journalist', desc: 'Historical research and writing for media houses' },
                 { icon: <Award className="w-6 h-6" />, title: 'Heritage Manager', desc: 'Manage cultural heritage sites and tourism' },
@@ -489,7 +545,7 @@ export default function BAHistoryPage() {
       </section>
 
       {/* Learning Facilities */}
-      <section className="py-16 bg-white" id="facilities">
+      {/* <section className="py-16 bg-white" id="facilities">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -536,41 +592,20 @@ export default function BAHistoryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-16 bg-brand-cream" id="why-choose">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=History+Department"
-                  alt="History Department"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">UPSC Selections</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={100} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Heritage Sites Visited</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -589,7 +624,7 @@ export default function BAHistoryPage() {
               <div className="space-y-4">
                 {[
                   { title: 'UGC Recognized & NAAC Accredited', description: 'Quality-assured education meeting national standards with excellent academic reputation.' },
-                  { title: 'Expert Learning Facilitators', description: 'Highly qualified faculty with doctoral degrees, archaeological experience, and research publications.' },
+                  { title: 'Expert Learning Facilitators', description: 'Highly qualified faculty with doctoral degrees and research publications.' },
                   { title: 'UPSC & Competitive Exam Coaching', description: 'Dedicated coaching for civil services with proven track record of successful candidates.' },
                   { title: 'Heritage Tours & Fieldwork', description: 'Regular excursions to archaeological sites, museums, and historical monuments across India.' },
                   { title: 'Research & Publication Support', description: 'Opportunities for archival research, paper presentations, and academic publications in reputed journals.' }
@@ -631,15 +666,19 @@ export default function BAHistoryPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Subramanian Iyer', designation: 'Head of Department', qualification: 'Ph.D. in Ancient Indian History' },
-                { name: 'Dr. Meenakshi Pillai', designation: 'Associate Professor', qualification: 'Ph.D. in Medieval History' },
-                { name: 'Mr. Arun Kumar', designation: 'Assistant Professor', qualification: 'M.Phil., NET Qualified' },
-                { name: 'Ms. Divya Krishnan', designation: 'Assistant Professor', qualification: 'M.A., SLET Qualified' }
+                { name: 'Dr. R. Kalpana Devi Priya', designation: 'Head of Department', qualification: 'M.A., M.Phil., Ph.D.', image: '/images/faculties/aided/history/Dr.-R.-Kalpana-Devi-Priya-240x300.png' },
+                { name: 'Dr. P. Vennila', designation: 'Assistant Professor', qualification: 'M.A., M.Phil., Ph.D.', image: '/images/faculties/aided/history/Dr.-B.-Suresh-240x300.png' },
+                { name: 'Mrs. S. Sarala', designation: 'Assistant Professor', qualification: 'M.A., M.Phil., B.Ed., (SET)', image: '/images/faculties/aided/history/Mrs.-S.-Sarala-240x300.png' },
+                { name: 'Mrs. E. Jaya', designation: 'Assistant Professor', qualification: 'B.Sc., M.A., M.Phil., M.Ed., (SET)', image: '/images/faculties/aided/history/Mrs.-E.-Jaya-240x300.png' },
+                { name: 'Dr. C. Jothi', designation: 'Assistant Professor', qualification: 'M.A., Ph.D.', image: '/images/faculties/aided/history/Dr.-C.-Jothi-240x300.png' },
+                { name: 'Dr. M. Samyuktha', designation: 'Assistant Professor', qualification: 'M.A., Ph.D.', image: '/images/faculties/aided/history/Dr.-M.-Samyuktha-240x300.png' },
+                { name: 'Dr. S. Abirami', designation: 'Assistant Professor', qualification: 'M.A., M.Phil., Ph.D., (SET)', image: '/images/faculties/aided/history/Dr.-S.-Abirami-240x300.png' },
+                { name: 'Mrs. C. Rathipriya', designation: 'Assistant Professor', qualification: 'M.A., M.Phil., (SET)', image: '/images/faculties/aided/history/Mrs.-C.-Rathipriya-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -647,7 +686,7 @@ export default function BAHistoryPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-green/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="p-5 text-center flex-1 flex flex-col justify-center">
-                    <h4 className="text-lg font-bold text-brand-green mb-1">{faculty.name}</h4>
+                    <h4 className="text-sm font-bold text-brand-green mb-1 whitespace-nowrap">{faculty.name}</h4>
                     <p className="text-sm font-semibold text-emerald-500 mb-1">{faculty.designation}</p>
                     <p className="text-xs text-gray-600">{faculty.qualification}</p>
                   </div>
@@ -739,7 +778,7 @@ export default function BAHistoryPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-brand-cream">
+      {/* <section className="py-16 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -793,7 +832,7 @@ export default function BAHistoryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

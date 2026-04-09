@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { BookOpen, Users, Award, Briefcase, GraduationCap, CheckCircle2, Clock, FileText, ChevronDown, ArrowRight, Sparkles, Camera, Video, Palette, Film, Monitor, Globe } from 'lucide-react';
 import CountUp from '@/components/ui/CountUp';
-import Marquee from '@/components/ui/Marquee';
 
 /* ─── Scroll-reveal hook ─── */
 function useScrollReveal() {
@@ -76,7 +75,7 @@ export default function BScVisualCommunicationPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Science in{' '}
                 <span className="text-brand-green">
                   Visual Communication
@@ -102,7 +101,7 @@ export default function BScVisualCommunicationPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -172,13 +171,13 @@ export default function BScVisualCommunicationPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Visual+Communication+Studio"
+                  src="/images/programmes/visual/JKKN B.Sc Visual Communication.png"
                   alt="Visual Communication Studio"
                   className="w-full h-auto"
                 />
-                <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
                   Modern Facilities
-                </span>
+                </span> */}
               </div>
             </RevealSection>
           </div>
@@ -214,12 +213,12 @@ export default function BScVisualCommunicationPage() {
                 {
                   icon: <FileText className="w-8 h-8 text-white" />,
                   title: 'Accepted Streams',
-                  items: ['Arts stream with any combination', 'Science stream (PCM/PCB)', 'Commerce stream students', 'Vocational courses with creative subjects']
+                  items: ['Arts stream with any combination', 'Commerce stream students']
                 },
                 {
                   icon: <BookOpen className="w-8 h-8 text-white" />,
                   title: 'Documents Required',
-                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy']
+                  items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy', 'Income Certificate', 'Bank Details']
                 }
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 150}>
@@ -285,11 +284,23 @@ export default function BScVisualCommunicationPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Introduction to Visual Communication', 'Fundamentals of Design', 'Drawing & Illustration Basics', 'Photography Fundamentals', 'Computer Applications for Design', 'Communication Theory']
+                    subjects: [
+                      'Introduction to Human Communication - 24UVCC01',
+                      'Visual Arts and Aesthetics - 24UVCC02',
+                      'Graphic Design & Aesthetics (Practical) - 24UVCDEP01',
+                      'Digital & Drawing and Painting (Practical) - 24UVCSEFP01',
+                      'Digital Storytelling and Script Writing (Practical) - 24UVCSECP01'
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Typography & Layout Design', 'Digital Imaging & Photo Editing', 'Color Theory & Application', 'Print Media Design', 'Mass Communication Basics', 'Studio Practice I']
+                    subjects: [
+                      'Understanding Visual Communication - 24UVCC03',
+                      'Photography & Videography (Practical) - 24UVCCP04',
+                      'Publication Design (Practical) - 24UVCDEP02',
+                      'Image Editing and Colour Management (Practical) - 24UVCSECP02',
+                      'Digital Photography - 24UVCSECP03'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -318,11 +329,25 @@ export default function BScVisualCommunicationPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Graphic Design & Branding', 'Video Production Fundamentals', 'Advertising & Campaign Design', 'Web Design Basics', '2D Animation Principles', 'Studio Practice II']
+                    subjects: [
+                      'Multimedia Technologies & Standards - 24UVCC05',
+                      'Audio & Visual Editing (Practical) - 24UVCCP06',
+                      '2D & 3D Modelling (Practical) - 24UVCDEP06',
+                      'Multimedia Content Packaging (Practical) - 24UVCSECP04',
+                      'Design Thinking - 24UVCSEC03',
+                      'EVS - 24UEVS01'
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Advanced Photography & Lighting', 'Motion Graphics & VFX Basics', 'Packaging Design', 'Digital Marketing Fundamentals', 'Film Studies & Appreciation', 'Industry Exposure Programme']
+                    subjects: [
+                      'Film Appreciation and Analysis - 24UVCC07',
+                      'Animation and Character Design (Practical) - 24UVCCP08',
+                      'Compositing and Visual Effects (Practical) - 24UVCDEP07',
+                      'Script Writing and Storyboard Development (Practical) - 24UVCSEP05',
+                      'Digital Skill for Employability (Practical) - 24UVCSECP6',
+                      'EVS - 24UEVS01'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -351,11 +376,26 @@ export default function BScVisualCommunicationPage() {
                 {[
                   {
                     title: 'Semester V',
-                    subjects: ['Advanced Video Editing & Post-Production', 'UI/UX Design Principles', 'Corporate Communication Design', '3D Modeling & Animation', 'Social Media Content Strategy', 'Specialization Elective I']
+                    subjects: [
+                      'Advertising and Brand Communication - 24UVCCP09',
+                      'User Experience Design - 24UVCCP09',
+                      'Advanced 3D Texturing and Sculpting (Practical) - 24UVCCP10',
+                      '3D Environment Design (Practical) - 24UVCCP12',
+                      'Immersive Media Design - 24UVCDSE08',
+                      'Shortfilm Making - 24UVCDEP09',
+                      'Internship - 24UVCSI01'
+                    ]
                   },
                   {
                     title: 'Semester VI',
-                    subjects: ['Documentary & Short Film Production', 'Portfolio Development & Presentation', 'Media Law & Ethics', 'Specialization Elective II', 'Industry Internship', 'Capstone Project']
+                    subjects: [
+                      'Media Culture in TamilNadu - 24UVCC13',
+                      'Media Entrepreneurship - 24UVCC14',
+                      'Extended Reality Design (Practical) - 24UVCCP15',
+                      'Capstone Project - 24UVCDEP08',
+                      'Cyber Security - 24UVCDE09',
+                      'Extension Activity - 24UEX01'
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -452,7 +492,7 @@ export default function BScVisualCommunicationPage() {
                 { icon: <Camera className="w-6 h-6" />, title: 'Photographer', desc: 'Commercial, fashion, and editorial photography' },
                 { icon: <Video className="w-6 h-6" />, title: 'Motion Graphics Artist', desc: 'Create animations and visual effects for media' },
                 { icon: <Globe className="w-6 h-6" />, title: 'Digital Marketer', desc: 'Social media content and brand communication' },
-                { icon: <Briefcase className="w-6 h-6" />, title: 'Art Director', desc: 'Lead creative teams in advertising agencies' },
+                { icon: <Briefcase className="w-6 h-6" />, title: 'Film Director', desc: 'Lead creative teams in advertising agencies' },
                 { icon: <Award className="w-6 h-6" />, title: 'Web Designer', desc: 'Design websites for IT companies and startups' }
               ].map((career, idx) => (
                 <RevealSection key={idx} delay={idx * 80}>
@@ -511,9 +551,6 @@ export default function BScVisualCommunicationPage() {
                 { title: 'Digital Design Studio', description: 'Fully equipped computer lab with high-performance workstations running Adobe Creative Suite, Autodesk, and other industry-standard software.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Design+Studio' },
                 { title: 'Photography Studio', description: 'Professional photography setup with DSLR cameras, studio lighting equipment, backdrops, and post-processing facilities for commercial shoots.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Photo+Studio' },
                 { title: 'Video Production Lab', description: 'Equipped with professional cameras, green screen facilities, audio recording equipment, and non-linear editing suites for film production.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Video+Lab' },
-                { title: 'Animation & VFX Lab', description: 'Dedicated workstations with 3D modeling, animation, and visual effects software including Maya, Blender, and After Effects.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Animation+Lab' },
-                { title: 'Drawing & Illustration Studio', description: 'Spacious studio with drawing boards, lighting setups, reference materials, and digital tablets for traditional and digital illustration work.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Drawing+Studio' },
-                { title: 'Media Resource Library', description: 'Extensive collection of design books, magazines, journals, and digital resources including stock footage and image libraries.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Media+Library' }
               ].map((facility, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group">
@@ -542,34 +579,13 @@ export default function BScVisualCommunicationPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Campus+Life"
-                  alt="Campus Life"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -628,17 +644,14 @@ export default function BScVisualCommunicationPage() {
               </div>
             </RevealSection>
 
-            <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
+            <div className="flex justify-center">
               {[
-                { name: 'Dr. Arun Kumar', designation: 'Head of Department', qualification: 'Ph.D. in Visual Communication' },
-                { name: 'Mr. Ravi Shankar', designation: 'Associate Professor', qualification: 'M.A., M.Phil. in Media Studies' },
-                { name: 'Ms. Priya Malhotra', designation: 'Assistant Professor', qualification: 'M.Sc. in Graphic Design' },
-                { name: 'Mr. Karthik Raj', designation: 'Assistant Professor', qualification: 'M.A. in Film Studies' }
+                { name: 'Mr.B.Baranidharan', designation: 'Head of Department', qualification: 'M.SC (EM).,' }
               ].map((faculty, idx) => (
-                <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
+                <div key={idx} className="w-[260px] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src="/images/faculties/self/visual/MR.B.BARANIDHARAN-300x199.png"
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -652,7 +665,7 @@ export default function BScVisualCommunicationPage() {
                   </div>
                 </div>
               ))}
-            </Marquee>
+            </div>
           </div>
         </div>
       </section>

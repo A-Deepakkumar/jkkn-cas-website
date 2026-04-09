@@ -97,29 +97,60 @@ export default function BComCAPage() {
   // Faculty data
   const facultyMembers = [
     {
-      name: "Dr. Sundarajan Rajan",
+      name: "Mrs.M.S.Punithamalar",
       designation: "HOD & Assistant Professor",
-      education: "PhD in Commerce, M.Com, CA Inter",
-      image: "/images/faculties/faculty-placeholder.jpg"
+      education: "M.Com(CA), MBA, M.Phil.,(Ph.D)",
+      image: "/images/faculties/Mrs.M.S.Punithamalar-300x199.png"
     },
     {
-      name: "Prof. Kavitha Murugan",
+      name: "Ms.G.Buvaneswari ",
       designation: "Assistant Professor",
-      education: "M.Com, M.Phil, NET Qualified",
-      image: "/images/faculties/faculty-placeholder.jpg"
+      education: "M.Com, B.ED, M.Phil",
+      image: "/images/faculties/Ms.G.Buvaneswari-300x199.png"
     },
     {
-      name: "Dr. Krishnan Iyer",
-      designation: "Associate Professor",
-      education: "PhD in Finance, CMA, M.Com",
-      image: "/images/faculties/faculty-placeholder.jpg"
-    },
-    {
-      name: "Ms. Priya Lakshmi",
+      name: "Mrs.N.Lingameena",
       designation: "Assistant Professor",
-      education: "M.Com, CA Foundation, Tally Certified",
-      image: "/images/faculties/faculty-placeholder.jpg"
+      education: "M.Com.,M.Phil.",
+      image: "/images/faculties/Mrs.N.Lingameena-300x199.png"
+    },
+    {
+      name: "Mr.A.Jegadishkumar",
+      designation: "Assistant Professor",
+      education: "M.Com.,B.Ed.,MBA",
+      image: "/images/faculties/Mr.A.Jegadishkumar-300x199.png"
+    },
+    {
+      name: "Ms.C.Agalya",
+      designation: "Assistant Professor",
+      education: "M.Com(CA).",
+      image: "/images/faculties/Ms.C.Agalya-300x199.png"
+    },
+    {
+      name: "Mrs.M.Sangeetha",
+      designation: "Assistant Professor",
+      education: "M.Com(CA)., B.Ed.",
+      image: "/images/faculties/Mrs.M.Sangeetha-300x199.png"
+    },
+    {
+      name: "Mr.S.Govindharaj",
+      designation: "Assistant Professor",
+      education: "M.Com., M.Phil., (Ph.D)",
+      image: "/images/faculties/Mr.S.Govindharaj-300x199.png"
+    },
+    {
+      name: "Dr.M.Palanisamy",
+      designation: "Assistant Professor",
+      education: "MA(ECO).,M.Phil.,Ph.D.",
+      image: "/images/faculties/Dr.M.Palanisamy-300x199.png"
+    },
+    {
+      name: "Mrs.G. Manimegalai",
+      designation: "Assistant Professor",
+      education: "M.COM,B.ED",
+      image: "/images/faculties/Manimegalai.jpg"
     }
+
   ];
 
   // Curriculum data
@@ -130,23 +161,26 @@ export default function BComCAPage() {
         {
           semester: "Semester I",
           subjects: [
-            { code: "ACC101", name: "Financial Accounting I" },
-            { code: "ECO101", name: "Business Economics" },
-            { code: "MAT101", name: "Business Mathematics" },
-            { code: "ENG101", name: "Business Communication" },
-            { code: "MGT101", name: "Principles of Management" },
-            { code: "EVS101", name: "Environmental Studies" }
+            { code: "24UGTA01", name: "Tamil - I" },
+            { code: "24UGEN01", name: "English - I" },
+            { code: "24UCCC01", name: "Financial Accounting - I" },
+            { code: "24UCCC02", name: "Principal of Management" },
+            { code: "24UCSGEP04", name: "Python Programming And Lab" },
+            { code: "24UBANM1", name: "Basics of Event Management" },
+            { code: "24UCCS01", name: "Elements of Industry 4.0" }
           ]
         },
         {
           semester: "Semester II",
           subjects: [
-            { code: "ACC102", name: "Financial Accounting II" },
-            { code: "STA101", name: "Business Statistics" },
-            { code: "BNK101", name: "Banking Theory & Practice" },
-            { code: "LAW101", name: "Business Law" },
-            { code: "MGT102", name: "Organizational Behaviour" },
-            { code: "CAB101", name: "Computer Applications in Business" }
+            { code: "24UGTA02", name: "Tamil - II" },
+            { code: "24UGEN02", name: "English - II" },
+            { code: "24UCCC03", name: "Financial Accounting - II" },
+            { code: "24UCCC04", name: "Business law" },
+            { code: "24UCSGEP05", name: "Office Automation Lab" },
+            { code: "24UBANM2", name: "Managerial Skill Development" },
+            { code: "25UCCS02", name: "Industrial law" },
+            { code: "25UDIM01", name: "Disaster Management" }
           ]
         }
       ]
@@ -157,23 +191,28 @@ export default function BComCAPage() {
         {
           semester: "Semester III",
           subjects: [
-            { code: "ACC201", name: "Corporate Accounting I" },
-            { code: "ACC202", name: "Cost Accounting" },
-            { code: "LAW201", name: "Company Law" },
-            { code: "CSE201", name: "Database Management Systems" },
-            { code: "MKT201", name: "Marketing Management" },
-            { code: "FIN201", name: "Financial Markets & Services" }
+            { code: "24UGTA03", name: "Tamil - III" },
+            { code: "24UGEN03", name: "English - III" },
+            { code: "24UCCC05", name: "Corporate Accounting - I" },
+            { code: "24UCCC06", name: "Business Mathematics And Statistics" },
+            { code: "24UCSGEP08", name: "Web Technology (PHP) And Lab" },
+            { code: "24UCCS03", name: "Personal Selling" },
+            { code: "24UCCS04", name: "Capital Market" },
+            { code: "24UHAWP01", name: "Health and Wellness" },
+            { code: "24UEVS01A", name: "Environmental Studies" }
           ]
         },
         {
           semester: "Semester IV",
           subjects: [
-            { code: "ACC203", name: "Corporate Accounting II" },
-            { code: "ACC204", name: "Management Accounting" },
-            { code: "TAX201", name: "Income Tax Law & Practice" },
-            { code: "CSE202", name: "Programming in C/C++" },
-            { code: "HRM201", name: "Human Resource Management" },
-            { code: "RES201", name: "Research Methodology" }
+            { code: "24UGTA04", name: "Tamil - IV" },
+            { code: "24UGEN04", name: "English - IV" },
+            { code: "24UCCC07", name: "Corporate Accounting - II" },
+            { code: "24UCCC08", name: "Company law" },
+            { code: "24UCSGEP09", name: "Relational Databases Management System" },
+            { code: "24UCCS05", name: "Service Marketing" },
+            { code: "24UCCSP01", name: "Commerce Practical" },
+            { code: "24UEVS01", name: "Environmental Studies" }
           ]
         }
       ]
@@ -184,23 +223,26 @@ export default function BComCAPage() {
         {
           semester: "Semester V",
           subjects: [
-            { code: "FIN301", name: "Financial Management" },
-            { code: "AUD301", name: "Auditing & Corporate Governance" },
-            { code: "TAX301", name: "Goods & Services Tax (GST)" },
-            { code: "ECM301", name: "E-Commerce" },
-            { code: "ACS301", name: "Accounting Software (Tally)" },
-            { code: "BAN301", name: "Business Analytics" }
+            { code: "23UCC08", name: "Cost Accounting - I" },
+            { code: "23UCC09", name: "Banking Law and Practice" },
+            { code: "23UCC10", name: "Income Tax Law and Practice - I" },
+            { code: "23UCCE02", name: "Indirect Taxation" },
+            { code: "23UCCEP07", name: "Software Engineer UML Lab" },
+            { code: "23UCCIT1", name: "Internship Training" },
+            { code: "NMAST51", name: "Accounting and Trading Essentials Employment" },
+            { code: "23UVE01", name: "Yoga for Human Excellence" },
+            { code: "23UCCPR1", name: "Project Viva Voce" }
           ]
         },
         {
           semester: "Semester VI",
           subjects: [
-            { code: "FIN302", name: "Advanced Financial Management" },
-            { code: "AUD302", name: "Advanced Auditing" },
-            { code: "TAX302", name: "Indirect Taxation" },
-            { code: "DGM301", name: "Digital Marketing" },
-            { code: "ERP301", name: "ERP Systems (SAP)" },
-            { code: "PRJ301", name: "Project Work & Internship" }
+            { code: "", name: "Cost Accounting" },
+            { code: "", name: "Management Accounting" },
+            { code: "", name: "Income Tax Law and Practice" },
+            { code: "", name: "Human Resources Management" },
+            { code: "", name: "General Awareness for Competitive Examinations" },
+            { code: "", name: "Tally Practicals" }
           ]
         }
       ]
@@ -246,7 +288,7 @@ export default function BComCAPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 Self-Finance Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Commerce in{' '}
                 <span className="text-brand-green">
                   Computer Application
@@ -272,7 +314,7 @@ export default function BComCAPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -374,15 +416,12 @@ export default function BComCAPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/programmes/bcom-ca-hero.jpg"
+                  src="/images/faculties/self/bcomca/JKKN B.Com CA (1).png"
                   alt="Commerce Computer Lab"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
                 />
-                <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
-                </span>
               </div>
             </RevealSection>
           </div>
@@ -846,15 +885,13 @@ export default function BComCAPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side */}
-                <div className="relative">
-                  <GlassCard className="p-16 min-h-[500px] flex items-center justify-center bg-gradient-to-br from-brand-green/90 to-emerald-600/90" hover={false}>
-                    <div className="text-center">
-                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-                        Why Choose JKKN
-                      </h3>
-                      <div className="w-24 h-1.5 bg-white/80 mx-auto rounded-full"></div>
-                    </div>
-                  </GlassCard>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                  <Image
+                    src="/images/programmes/Campus Life.png"
+                    alt="Campus Life at JKKN"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Right Side */}
@@ -872,10 +909,10 @@ export default function BComCAPage() {
                       </div>
                       <div>
                         <h4 className="text-lg font-bold text-brand-green mb-2">
-                          70+ Years of Academic Excellence
+                          31+ Years of Academic Excellence
                         </h4>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Part of J.K.K. Nattraja Educational Institutions with proven legacy in progressive education since 1954.
+                          Part of JKKN Educational Institutions with proven legacy in progressive education since 1954.
                         </p>
                       </div>
                     </div>
@@ -1058,10 +1095,10 @@ export default function BComCAPage() {
                 Join JKKN's B.Com CA programme and build a successful career in accounting, finance, and technology
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <button className="group bg-brand-green hover:bg-brand-green/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="group bg-brand-green hover:bg-brand-green/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2">
                   Apply Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
                 <button className="bg-white border-2 border-brand-green hover:bg-brand-green text-brand-green hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-2xl hover:-translate-y-1">
                   Schedule Campus Visit
                 </button>

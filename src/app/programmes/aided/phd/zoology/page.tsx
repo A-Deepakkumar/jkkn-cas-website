@@ -76,7 +76,7 @@ export default function PhDZoologyPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Doctoral Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Doctor of Philosophy (Ph.D) in{' '}
                 <span className="text-brand-green">
                   Zoology
@@ -102,7 +102,7 @@ export default function PhDZoologyPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -122,7 +122,7 @@ export default function PhDZoologyPage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'UGC', title: 'Recognized Programme', desc: 'Quality doctoral education' },
               { icon: <Users className="w-7 h-7" />, stat: '8+', title: 'Research Supervisors', desc: 'Expert guidance available' },
-              { icon: <BookOpen className="w-7 h-7" />, stat: '50+', title: 'Ph.D Awarded', desc: 'Strong research legacy' },
+              { icon: <BookOpen className="w-7 h-7" />, stat: '10+', title: 'Ph.D Awarded', desc: 'Strong research legacy' },
               { icon: <Briefcase className="w-7 h-7" />, stat: '100%', title: 'Career Placement', desc: 'Academia & research positions' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -172,12 +172,12 @@ export default function PhDZoologyPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Zoology+Research+Lab"
+                  src="/images/programmes/zoology/JKKN Ph.D Zoology.png"
                   alt="Zoology Research Laboratory"
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 2001
                 </span>
               </div>
             </RevealSection>
@@ -265,8 +265,8 @@ export default function PhDZoologyPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: <FlaskConical className="w-6 h-6 text-white" />, title: 'Animal Physiology & Biochemistry', description: 'Research on metabolic pathways, hormonal regulation, neurophysiology, comparative physiology, and stress biology in animals.' },
-                { icon: <Dna className="w-6 h-6 text-white" />, title: 'Molecular Biology & Genetics', description: 'DNA/RNA analysis, gene expression studies, molecular markers, population genetics, and biotechnological applications in animal sciences.' },
+                { icon: <FlaskConical className="w-6 h-6 text-white" />, title: 'Nanotoxicology', description: 'Understand toxicity and safety of nanomaterials,study exposure pathways (air, water, food, skin),analyze biological and environmental risks and develop safe nanotechnology applications.' },
+                { icon: <Dna className="w-6 h-6 text-white" />, title: 'Fishery Biology & Molecular Genetics', description: 'Study fish life cycles and behavior,Identify species using genetic markers,Improve breeding and disease resistance,protect biodiversity and aquatic resources' },
                 { icon: <Globe className="w-6 h-6 text-white" />, title: 'Ecology & Environmental Biology', description: 'Ecosystem dynamics, ecological modeling, climate change impact, pollution biology, and environmental assessment studies.' },
                 { icon: <Bug className="w-6 h-6 text-white" />, title: 'Entomology & Pest Management', description: 'Insect taxonomy, agricultural pest control, integrated pest management, vector biology, and beneficial insect research.' },
                 { icon: <Microscope className="w-6 h-6 text-white" />, title: 'Immunology & Toxicology', description: 'Immune response mechanisms, vaccine development, ecotoxicology, biomarkers, and toxicity assessment in aquatic and terrestrial organisms.' },
@@ -311,13 +311,13 @@ export default function PhDZoologyPage() {
 
             <RevealSection>
               <div className="flex justify-center gap-2 mb-8">
-                {[1, 2, 3].map((phase) => (
+                {[1].map((phase) => (
                   <button
                     key={phase}
                     onClick={() => setActivePhase(phase)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activePhase === phase
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Phase {phase}
@@ -327,32 +327,32 @@ export default function PhDZoologyPage() {
             </RevealSection>
 
             {activePhase === 1 && (
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex justify-center">
                 {[
                   {
-                    title: 'Research Methodology (Semester I)',
+                    title: 'Semester',
                     subjects: [
-                      'Research Methodology in Life Sciences (4 Credits)',
-                      'Biostatistics & Data Analysis (4 Credits)',
-                      'Scientific Writing & Publication Ethics (2 Credits)',
-                      'Bioinformatics & Computational Tools (2 Credits)',
-                      'Literature Review & Documentation (2 Credits)',
-                      'Research Seminar Presentation (2 Credits)'
+                      'Aquaculture & Fishery Biology',
+                      'Research Methodology',
+                      'Recent Trends in Zoology',
+                      'Research and Publication Ethics',
+                      'Guide Paper : Toxicology'
+
                     ]
                   },
-                  {
-                    title: 'Specialization Courses (Semester II)',
-                    subjects: [
-                      'Advanced Techniques in Zoology (4 Credits)',
-                      'Molecular & Cellular Biology (4 Credits)',
-                      'Ecological Research Methods (2 Credits)',
-                      'Elective: Area of Specialization (4 Credits)',
-                      'Research Synopsis Development (2 Credits)',
-                      'Comprehensive Examination (Qualifying)'
-                    ]
-                  }
+                  // {
+                  //   title: 'Specialization Courses (Semester II)',
+                  //   subjects: [
+                  //     'Advanced Techniques in Zoology (4 Credits)',
+                  //     'Molecular & Cellular Biology (4 Credits)',
+                  //     'Ecological Research Methods (2 Credits)',
+                  //     'Elective: Area of Specialization (4 Credits)',
+                  //     'Research Synopsis Development (2 Credits)',
+                  //     'Comprehensive Examination (Qualifying)'
+                  //   ]
+                  // }
                 ].map((phase, idx) => (
-                  <RevealSection key={idx} delay={idx * 150}>
+                  <RevealSection key={idx} delay={idx * 150} className="w-full max-w-lg">
                     <GlassCard className="overflow-hidden" hover={false}>
                       <div className="bg-gradient-to-r from-brand-green to-emerald-500 text-white px-6 py-4">
                         <h4 className="text-xl font-bold">{phase.title}</h4>
@@ -373,7 +373,7 @@ export default function PhDZoologyPage() {
               </div>
             )}
 
-            {activePhase === 2 && (
+            {/* {activePhase === 2 && (
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
@@ -418,9 +418,9 @@ export default function PhDZoologyPage() {
                   </RevealSection>
                 ))}
               </div>
-            )}
+            )} */}
 
-            {activePhase === 3 && (
+            {/* {activePhase === 3 && (
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
@@ -465,7 +465,7 @@ export default function PhDZoologyPage() {
                   </RevealSection>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>
@@ -576,7 +576,7 @@ export default function PhDZoologyPage() {
       </section>
 
       {/* Research Facilities */}
-      <section className="py-16 bg-brand-cream" id="facilities">
+      {/* <section className="py-16 bg-brand-cream" id="facilities">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -597,11 +597,7 @@ export default function PhDZoologyPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: 'Advanced Research Laboratory', description: 'Fully equipped laboratory with PCR, electrophoresis, spectrophotometer, and advanced molecular biology instruments for cutting-edge research.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Research+Lab' },
-                { title: 'Microscopy & Imaging Center', description: 'High-resolution microscopy facility with phase contrast, fluorescence microscopes, and image analysis systems for detailed cellular studies.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Microscopy+Center' },
-                { title: 'Institutional Animal House', description: 'CPCSEA-approved animal facility for maintaining research animals with proper housing, breeding, and ethical research protocols.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Animal+House' },
-                { title: 'Zoology Museum', description: 'Extensive collection of preserved specimens, taxidermy mounts, skeletal systems, and comparative anatomy exhibits for teaching and research.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Zoology+Museum' },
-                { title: 'Bioinformatics Laboratory', description: 'High-performance computing facility with specialized software for genomic analysis, molecular modeling, and statistical data processing.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Bioinformatics+Lab' },
-                { title: 'Field Research Station', description: 'Access to biodiversity hotspots, aquatic ecosystems, and protected areas for field research, sample collection, and ecological monitoring.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Field+Station' }
+                { title: 'Zoology Museum', description: 'Extensive collection of preserved specimens, taxidermy mounts, skeletal systems, and comparative anatomy exhibits for teaching and research.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Zoology+Museum' }
               ].map((facility, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group">
@@ -623,41 +619,20 @@ export default function PhDZoologyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white" id="why-choose">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Research+Excellence"
-                  alt="Research Excellence"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={50} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Ph.D Awarded</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={8} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Research Guides</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -718,15 +693,20 @@ export default function PhDZoologyPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. [Faculty Name]', designation: 'Professor & Head', qualification: 'Ph.D (Animal Physiology) | 25+ Years Experience' },
-                { name: 'Dr. [Faculty Name]', designation: 'Associate Professor', qualification: 'Ph.D (Molecular Biology) | 18+ Years Experience' },
-                { name: 'Dr. [Faculty Name]', designation: 'Assistant Professor', qualification: 'Ph.D (Ecology) | 12+ Years Experience' },
-                { name: 'Dr. [Faculty Name]', designation: 'Assistant Professor', qualification: 'Ph.D (Entomology) | 10+ Years Experience' }
+                { name: 'Dr. S. Umavathi', designation: 'Associate Professor & Head', qualification: 'M.Sc., Ph.D., PGDCA.', image: '/images/faculties/aided/zoology/Dr.-S.-Umavathi-240x300.png' },
+                { name: 'Dr. Y. Thangam', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., M.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-Y.-Thangam-240x300.png' },
+                { name: 'Dr. R. Sowdeswari', designation: 'Assistant Professor', qualification: 'M.Sc., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-R.-Sowdeswari-240x300.png' },
+                { name: 'Dr. K. M. Syed Ali Fathima', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D., D.C.A.', image: '/images/faculties/aided/zoology/Dr.-K.-M.-Syed-Ali-Fathima-240x300.png' },
+                { name: 'Dr. P. Madhiyazhagan', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., B.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-P.-Madhiyazhagan-240x300.png' },
+                { name: 'Dr. S. Umamaheswari', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., B.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-S.-Umamaheswari-240x300.png' },
+                { name: 'Dr. K. Shenkani', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D., PGDBI., (SET)', image: '/images/faculties/aided/zoology/Dr.-K.-Shenkani-240x300.png' },
+                { name: 'Dr. S. Kalaimani', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., M.Ed., Ph.D., DCA., (SET)', image: '/images/faculties/aided/zoology/Dr.-S.-Kalaimani-240x300.png' },
+                { name: 'Mrs. S. Kowsalya', designation: 'Assistant Professor', qualification: 'M.Sc., M.Ed., (SET)', image: '/images/faculties/aided/zoology/Mrs.-S.-Kowsalya-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -829,7 +809,7 @@ export default function PhDZoologyPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -883,7 +863,7 @@ export default function PhDZoologyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

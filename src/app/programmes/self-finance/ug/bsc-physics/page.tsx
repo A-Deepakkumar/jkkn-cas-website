@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { BookOpen, Users, Award, Briefcase, GraduationCap, Building2, CheckCircle2, Clock, FileText, Globe, ChevronDown, ArrowRight, Sparkles, Target, Atom, Microscope, FlaskConical, Database, Zap, Brain, Calendar, UserCheck, DollarSign, TrendingUp } from 'lucide-react';
 import CountUp from '@/components/ui/CountUp';
-import Marquee from '@/components/ui/Marquee';
 
 /* ─── Scroll-reveal hook ─── */
 function useScrollReveal() {
@@ -76,7 +75,7 @@ export default function BScPhysicsPage() {
     },
     {
       question: "What is the eligibility criteria for B.Sc Physics admission?",
-      answer: "Candidates must have completed Higher Secondary (10+2) from a recognized board with Physics and Mathematics as compulsory subjects. A minimum aggregate of 50% marks is required for general category candidates and 45% for reserved categories. Chemistry or Computer Science as an additional subject is preferred but not mandatory."
+      answer: "Candidates must have completed Higher Secondary (10+2) from a recognized board with Physics,Chemistry and Mathematics as compulsory subjects. A minimum aggregate of 50% marks is required for general category candidates and 45% for reserved categories. "
     },
     {
       question: "What higher studies options are available after B.Sc Physics?",
@@ -109,10 +108,10 @@ export default function BScPhysicsPage() {
             "description": "A comprehensive 3-year undergraduate programme in Physics covering classical mechanics, quantum physics, electromagnetism, thermodynamics, nuclear physics, and electronics designed to develop scientific thinking, research aptitude, and practical laboratory skills.",
             "provider": {
               "@type": "CollegeOrUniversity",
-              "name": "J.K.K. Nattraja College of Arts and Science",
+              "name": "JKKN College of Arts and Science",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Kumarapalayam",
+                "addressLocality": "Komarapalayam",
                 "addressRegion": "Tamil Nadu",
                 "addressCountry": "India"
               }
@@ -134,7 +133,7 @@ export default function BScPhysicsPage() {
                   <GraduationCap className="w-4 h-4 text-brand-green" />
                   UGC Recognized Programme
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                   Bachelor of Science in{' '}
                   <span className="text-brand-green">
                     Physics
@@ -160,7 +159,7 @@ export default function BScPhysicsPage() {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                  <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     Apply Now
                     <ArrowRight className="w-4 h-4" />
                   </a>
@@ -180,7 +179,7 @@ export default function BScPhysicsPage() {
               {[
                 { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
                 { icon: <FlaskConical className="w-7 h-7" />, stat: 'Modern', title: 'Physics Labs', desc: 'State-of-the-art facilities' },
-                { icon: <Briefcase className="w-7 h-7" />, stat: '90%+', title: 'Placement Record', desc: 'Career opportunities assured' },
+                { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Career opportunities assured' },
                 { icon: <Atom className="w-7 h-7" />, stat: 'ISRO', title: 'Industry Connect', desc: 'Research collaborations' },
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
@@ -230,13 +229,13 @@ export default function BScPhysicsPage() {
               <RevealSection className="lg:col-span-2" delay={200}>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Physics+Laboratory"
+                    src="/images/faculties/self/physics/JKKN B.Sc Physics.png"
                     alt="Physics Laboratory"
                     className="w-full h-auto"
                   />
-                  <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                    Since 1954
-                  </span>
+                  {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                    Since 1952
+                  </span> */}
                 </div>
               </RevealSection>
             </div>
@@ -267,33 +266,19 @@ export default function BScPhysicsPage() {
                   {
                     icon: <GraduationCap className="w-8 h-8 text-white" />,
                     title: 'Academic Qualification',
-                    items: ['Higher Secondary (10+2) from recognized board', 'Physics & Mathematics as compulsory subjects', 'Minimum 50% aggregate marks', '45% for reserved categories']
+                    items: ['Higher Secondary (10+2) from recognized board', 'Physics,Chemistry & Mathematics as compulsory subjects', 'Minimum 50% aggregate marks', '45% for reserved categories']
                   },
                   {
                     icon: <BookOpen className="w-8 h-8 text-white" />,
                     title: 'Accepted Streams',
-                    items: ['Science stream with Physics mandatory', 'Physics, Chemistry & Mathematics (PCM)', 'Physics, Chemistry, Mathematics & Computer Science', 'Vocational Science courses with Physics']
+                    items: ['Science stream with Physics mandatory', 'Physics,Biology, Chemistry & Mathematics (PCM)', 'Physics, Chemistry, Mathematics & Computer Science', 'Vocational Science courses with Physics']
                   },
                   {
                     icon: <FileText className="w-8 h-8 text-white" />,
                     title: 'Documents Required',
                     items: ['10th & 12th Mark Sheets', 'Transfer Certificate', 'Community Certificate', 'Passport Size Photographs', 'Aadhaar Card Copy']
-                  },
-                  {
-                    icon: <Calendar className="w-8 h-8 text-white" />,
-                    title: 'Admission Process',
-                    items: ['Online/Offline Application', 'Document Verification', 'Merit-based Selection', 'Fee Payment & Enrollment']
-                  },
-                  {
-                    icon: <UserCheck className="w-8 h-8 text-white" />,
-                    title: 'Age Criteria',
-                    items: ['No upper age limit for admission', 'Candidates who have completed 17 years of age as on December 31st of the admission year are eligible']
-                  },
-                  {
-                    icon: <DollarSign className="w-8 h-8 text-white" />,
-                    title: 'Scholarships Available',
-                    items: ['Merit Scholarships (Top 10%)', 'Government Scholarships', 'Financial Aid for EWS', 'Sports Quota Benefits']
                   }
+
                 ].map((card, idx) => (
                   <RevealSection key={idx} delay={idx * 100}>
                     <GlassCard className="p-8 h-full">
@@ -343,8 +328,8 @@ export default function BScPhysicsPage() {
                       key={year}
                       onClick={() => setActiveYear(year)}
                       className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                          ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                          : 'bg-white text-brand-green hover:bg-brand-green/5'
+                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                        : 'bg-white text-brand-green hover:bg-brand-green/5'
                         }`}
                     >
                       Year {year}
@@ -359,23 +344,31 @@ export default function BScPhysicsPage() {
                     {
                       title: 'Semester I',
                       subjects: [
-                        { name: 'Mechanics & Properties of Matter', code: 'PHY101' },
-                        { name: 'Mathematical Physics I', code: 'PHY102' },
-                        { name: 'Electricity & Magnetism', code: 'PHY103' },
-                        { name: 'Practical: Mechanics Lab', code: 'PHY104P' },
-                        { name: 'Allied Mathematics I', code: 'MAT101' },
-                        { name: 'Environmental Studies', code: 'EVS101' }
+                        { name: 'General Tamil - I', code: '24UGTA01' },
+                        { name: 'General English – I', code: '24UGEN01' },
+                        { name: 'Core – I, Properties of Matter & Sound', code: '24UPHC01' },
+                        { name: 'Core Practical – I, Properties of Matter Experiments', code: '24UPHCP01' },
+                        { name: 'Generic Elective Mathematics – I', code: '24UMAGE1' },
+                        { name: 'Non-Major Elective – I (NME), Physics For Everyday Life', code: '24UPHNM1' },
+                        { name: 'Foundation Course, Introductory Physics', code: '24UPHF01' },
+                        { name: 'Generic Elective Physics – I (Elective)', code: '24UPHGE1' },
+                        { name: 'Generic Elective Physics Practical – I (Elective)', code: '24UPHGEP01' }
                       ]
                     },
                     {
                       title: 'Semester II',
                       subjects: [
-                        { name: 'Thermal Physics', code: 'PHY201' },
-                        { name: 'Waves & Oscillations', code: 'PHY202' },
-                        { name: 'Mathematical Physics II', code: 'PHY203' },
-                        { name: 'Practical: Thermal & Electricity Lab', code: 'PHY204P' },
-                        { name: 'Allied Mathematics II', code: 'MAT102' },
-                        { name: 'Value Education', code: 'VAL101' }
+                        { name: 'General Tamil – II', code: '24UGTA02' },
+                        { name: 'General English – II', code: '24UGEN02' },
+                        { name: 'Core – II, Heat, Thermodynamics and Statistical Physics', code: '24UPHC02' },
+                        { name: 'Core Practical – II, Heat, Oscillations, Waves & Sound Experiments', code: '24UPHCP02' },
+                        { name: 'Generic Elective Mathematics – II', code: '24UMAGE2' },
+                        { name: 'Generic Elective Mathematics Practical', code: '24UMAGEP01' },
+                        { name: 'Non Major Elective – II (NME), Astrophysics', code: '24UPHNM2' },
+                        { name: 'SEC – I, Instrumentation', code: '24UPHS01' },
+                        { name: 'Disaster Management', code: '25UPHDIM01' },
+                        { name: 'Generic Elective Physics – II (Elective)', code: '24UPHGE2' },
+                        { name: 'Generic Elective Physics Practical – II (Elective)', code: '24UPHGEP02' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -387,12 +380,12 @@ export default function BScPhysicsPage() {
                         <div className="p-6">
                           <ul className="space-y-3">
                             {sem.subjects.map((subject, i) => (
-                              <li key={i} className="flex items-center justify-between text-gray-700">
+                              <li key={i} className="flex flex-col gap-1 text-gray-700">
                                 <div className="flex items-start gap-2">
                                   <span className="text-emerald-500 mt-1">•</span>
-                                  <span>{subject.name}</span>
+                                  <span className="flex-1">{subject.name}</span>
                                 </div>
-                                <span className="text-brand-green font-semibold text-sm ml-2">{subject.code}</span>
+                                <span className="text-brand-green font-semibold text-xs ml-4 opacity-70">{subject.code}</span>
                               </li>
                             ))}
                           </ul>
@@ -409,23 +402,30 @@ export default function BScPhysicsPage() {
                     {
                       title: 'Semester III',
                       subjects: [
-                        { name: 'Optics', code: 'PHY301' },
-                        { name: 'Electromagnetism', code: 'PHY302' },
-                        { name: 'Digital Electronics', code: 'PHY303' },
-                        { name: 'Practical: Optics Lab', code: 'PHY304P' },
-                        { name: 'Allied Chemistry I', code: 'CHE101' },
-                        { name: 'Soft Skills Development', code: 'SKL301' }
+                        { name: 'General Tamil - III', code: '24UGTA03' },
+                        { name: 'General English – III', code: '24UGEN03' },
+                        { name: 'Core – III, General Mechanics and Classical Mechanics', code: '24UPHC03' },
+                        { name: 'Core Practical – III, Electricity Experiments', code: '24UPHCP03' },
+                        { name: 'Generic Elective Chemistry – I', code: '24UCHGE1' },
+                        { name: 'Generic Elective Chemistry Practical – I', code: '24UCHGEP01' },
+                        { name: 'SEC – II Entrepreneurial Based, Home Electrical Installation', code: '24UPHS02' },
+                        { name: 'SEC – III, Computational Methods and Programming in C', code: '24UPHS03' },
+                        { name: 'Environmental Studies', code: '24UEVS01' },
+                        { name: 'Health & Wellness', code: '24UHAWP01' }
                       ]
                     },
                     {
                       title: 'Semester IV',
                       subjects: [
-                        { name: 'Classical Mechanics', code: 'PHY401' },
-                        { name: 'Analog Electronics', code: 'PHY402' },
-                        { name: 'Statistical Mechanics', code: 'PHY403' },
-                        { name: 'Practical: Electronics Lab', code: 'PHY404P' },
-                        { name: 'Allied Chemistry II', code: 'CHE102' },
-                        { name: 'Extension Activities', code: 'EXT401' }
+                        { name: 'General Tamil – IV', code: '24UGTA04' },
+                        { name: 'General English – IV', code: '24UGEN04' },
+                        { name: 'Core – IV, Optics and Spectroscopy', code: '24UPHC04' },
+                        { name: 'Core Practical – IV, Light Experiments', code: '24UPHCP04' },
+                        { name: 'Generic Elective Chemistry – II', code: '24UCHGE2' },
+                        { name: 'Generic Elective Chemistry Practical – II', code: '24UCHGEP02' },
+                        { name: 'SEC – IV, Electronic Devices', code: '24UPHS04' },
+                        { name: 'SEC – V, Communication Systems', code: '24UPHS05' },
+                        { name: 'Environmental Studies', code: '24UEVS01' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -437,12 +437,12 @@ export default function BScPhysicsPage() {
                         <div className="p-6">
                           <ul className="space-y-3">
                             {sem.subjects.map((subject, i) => (
-                              <li key={i} className="flex items-center justify-between text-gray-700">
+                              <li key={i} className="flex flex-col gap-1 text-gray-700">
                                 <div className="flex items-start gap-2">
                                   <span className="text-emerald-500 mt-1">•</span>
-                                  <span>{subject.name}</span>
+                                  <span className="flex-1">{subject.name}</span>
                                 </div>
-                                <span className="text-brand-green font-semibold text-sm ml-2">{subject.code}</span>
+                                <span className="text-brand-green font-semibold text-xs ml-4 opacity-70">{subject.code}</span>
                               </li>
                             ))}
                           </ul>
@@ -459,23 +459,27 @@ export default function BScPhysicsPage() {
                     {
                       title: 'Semester V',
                       subjects: [
-                        { name: 'Quantum Mechanics I', code: 'PHY501' },
-                        { name: 'Atomic & Molecular Physics', code: 'PHY502' },
-                        { name: 'Solid State Physics', code: 'PHY503' },
-                        { name: 'Computational Physics', code: 'PHY504' },
-                        { name: 'Practical: Modern Physics Lab', code: 'PHY505P' },
-                        { name: 'Elective: Astrophysics / Material Science', code: 'PHY506E' }
+                        { name: 'Core – V, Atomic Physics and Lasers', code: '24UPHC05' },
+                        { name: 'Core – VI, Relativity and Quantum Mechanics', code: '24UPHC06' },
+                        { name: 'Core – VII, Electricity and Magnetism', code: '24UPHC07' },
+                        { name: 'Discipline Elective – I, Energy Physics', code: '24UPHDE1' },
+                        { name: 'Discipline Elective – II, Materials Science', code: '24UPHDE2' },
+                        { name: 'Core Practical – V, General Experiments', code: '24UPHCP05' },
+                        { name: 'Value Education', code: '24UVE01' },
+                        { name: 'Internship / Industrial Visit / Field Visit', code: '24UPHIN01' }
                       ]
                     },
                     {
                       title: 'Semester VI',
                       subjects: [
-                        { name: 'Quantum Mechanics II', code: 'PHY601' },
-                        { name: 'Nuclear & Particle Physics', code: 'PHY602' },
-                        { name: 'Relativity & Cosmology', code: 'PHY603' },
-                        { name: 'Research Methodology', code: 'PHY604' },
-                        { name: 'Project Work & Viva', code: 'PHY605P' },
-                        { name: 'Elective: Nanophysics / Renewable Energy', code: 'PHY606E' }
+                        { name: 'Core – VIII, Nuclear and Particle Physics', code: '24UPHC08' },
+                        { name: 'Core Course – IX, Solid State Physics', code: '24UPHC09' },
+                        { name: 'Core Course – X, Digital Electronics & Microprocessor 8085', code: '24UPHC10' },
+                        { name: 'Discipline Elective – III, Nanoscience & Nanotechnology', code: '24UPHDE3' },
+                        { name: 'Core Practical – VI, Electronics Experiments', code: '24UPHCP06' },
+                        { name: 'Project', code: '—' },
+                        { name: 'Professional Competency Skills', code: '—' },
+                        { name: 'Extension Activity', code: '24UEX01' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -487,12 +491,12 @@ export default function BScPhysicsPage() {
                         <div className="p-6">
                           <ul className="space-y-3">
                             {sem.subjects.map((subject, i) => (
-                              <li key={i} className="flex items-center justify-between text-gray-700">
+                              <li key={i} className="flex flex-col gap-1 text-gray-700">
                                 <div className="flex items-start gap-2">
                                   <span className="text-emerald-500 mt-1">•</span>
-                                  <span>{subject.name}</span>
+                                  <span className="flex-1">{subject.name}</span>
                                 </div>
-                                <span className="text-brand-green font-semibold text-sm ml-2">{subject.code}</span>
+                                <span className="text-brand-green font-semibold text-xs ml-4 opacity-70">{subject.code}</span>
                               </li>
                             ))}
                           </ul>
@@ -528,7 +532,7 @@ export default function BScPhysicsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   { icon: <Brain className="w-6 h-6 text-white" />, title: 'Analytical Thinking', description: 'Master systematic approaches to physical problem-solving, mathematical modeling, experimental design, and data interpretation using statistical and computational tools.' },
-                  { icon: <BookOpen className="w-6 h-6 text-white" />, title: 'Theoretical Foundation', description: 'Develop comprehensive knowledge of classical and modern physics including mechanics, electromagnetism, quantum physics, and relativity with mathematical rigor.' },
+                  { icon: <BookOpen className="w-6 h-6 text-white" />, title: 'Theoretical Foundation', description: 'Develop comprehensive knowledge of classical and modern physics including mechanics, electromagnetism, quantum physics, and relativity with mathematical Physics.' },
                   { icon: <FlaskConical className="w-6 h-6 text-white" />, title: 'Laboratory Proficiency', description: 'Acquire hands-on skills in experimental physics, precision measurements, instrumentation, electronics fabrication, and modern laboratory techniques.' },
                   { icon: <Database className="w-6 h-6 text-white" />, title: 'Computational Skills', description: 'Comprehend numerical methods, programming languages, simulation techniques, and data analysis methodologies essential for modern physics research.' },
                   { icon: <Zap className="w-6 h-6 text-white" />, title: 'Electronics Expertise', description: 'Apply analog and digital electronics concepts including circuit design, microcontroller programming, and instrumentation for scientific applications.' },
@@ -658,37 +662,93 @@ export default function BScPhysicsPage() {
         {/* Why Choose JKKN */}
         <section className="py-16 bg-brand-cream">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <RevealSection>
-                <div className="text-center mb-12">
-                  <SectionBadge text="Why JKKN" />
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Why Choose Our{' '}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
-                      B.Sc Physics Programme?
-                    </span>
-                  </h2>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                  <Image
+                    src="/images/programmes/Campus Life.png"
+                    alt="Campus Life at JKKN"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </RevealSection>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { icon: <GraduationCap className="w-6 h-6 text-white" />, title: 'Expert Learning Facilitators', description: 'Learn from experienced faculty with doctoral degrees and active research in specialized physics fields.' },
-                  { icon: <Microscope className="w-6 h-6 text-white" />, title: 'Research-Oriented Learning', description: 'Engage in research projects with collaboration opportunities with national laboratories like ISRO and DRDO.' },
-                  { icon: <Briefcase className="w-6 h-6 text-white" />, title: 'Excellent Placement Support', description: 'Strong industry connections ensuring placement opportunities in leading technology and research organizations.' },
-                  { icon: <FlaskConical className="w-6 h-6 text-white" />, title: 'Modern Infrastructure', description: 'Access to well-equipped laboratories, computational facilities, and latest scientific instruments.' },
-                  { icon: <TrendingUp className="w-6 h-6 text-white" />, title: 'Higher Education Pathways', description: 'Strong foundation for M.Sc Physics, integrated PhD programmes, and competitive exams like IIT-JAM, GATE, and CSIR-NET.' },
-                  { icon: <Award className="w-6 h-6 text-white" />, title: 'NAAC Accreditation', description: 'Quality-assured education with government recognition and industry partnerships ensuring excellent learning outcomes.' }
-                ].map((reason, idx) => (
-                  <RevealSection key={idx} delay={idx * 100}>
-                    <GlassCard className="p-6 group h-full">
-                      <div className="w-12 h-12 bg-gradient-to-br from-brand-green to-emerald-500 rounded-lg flex items-center justify-center mb-4 shadow-lg shadow-brand-green/20 group-hover:shadow-brand-green/30 transition-shadow">
+              <RevealSection delay={200}>
+                <SectionBadge text="Why JKKN" />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose Our{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
+                    B.Sc Physics Programme?
+                  </span>
+                </h2>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: <GraduationCap className="w-6 h-6" />, title: 'Expert Learning Facilitators', description: 'Learn from experienced faculty with doctoral degrees and active research in specialized physics fields.' },
+                    { icon: <Microscope className="w-6 h-6" />, title: 'Research-Oriented Learning', description: 'Engage in research projects with collaboration opportunities with national laboratories like ISRO and DRDO.' },
+                    { icon: <Briefcase className="w-6 h-6" />, title: 'Excellent Placement Support', description: 'Strong industry connections ensuring placement opportunities in leading technology and research organizations.' },
+                    { icon: <FlaskConical className="w-6 h-6" />, title: 'Modern Infrastructure', description: 'Access to well-equipped laboratories, computational facilities, and latest scientific instruments.' },
+                    { icon: <TrendingUp className="w-6 h-6" />, title: 'Higher Education Pathways', description: 'Strong foundation for M.Sc Physics, integrated PhD programmes, and competitive exams like IIT-JAM, GATE, and CSIR-NET,M.Sc. Electronics,M.Sc. NanoScience,MBA,MCA,AstroPhysics,M.Sc. Medical Physics.' },
+                    { icon: <Award className="w-6 h-6" />, title: 'NAAC Accreditation', description: 'Quality-assured education with government recognition and industry partnerships ensuring excellent learning outcomes.' }
+                  ].map((reason, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-white/40 backdrop-blur-xl rounded-lg flex items-center justify-center flex-shrink-0 border border-white/60 text-brand-green">
                         {reason.icon}
                       </div>
-                      <h3 className="text-lg font-bold text-brand-green mb-2">{reason.title}</h3>
-                      <p className="text-gray-600 text-sm">{reason.description}</p>
-                    </GlassCard>
-                  </RevealSection>
+                      <div>
+                        <h4 className="text-lg font-bold text-brand-green mb-2">{reason.title}</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">{reason.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </RevealSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Faculty Section */}
+        <section className="py-16 bg-white" id="faculty">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <RevealSection>
+                <div className="text-center mb-12">
+                  <SectionBadge text="Faculty" />
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Our Learning{' '}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
+                      Facilitators
+                    </span>
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Meet our experienced and dedicated Physics faculty members
+                  </p>
+                </div>
+              </RevealSection>
+
+              <div className="flex flex-wrap justify-center gap-6">
+                {[
+                  { name: 'Dr. N. Latha', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D., B.Ed.', image: '/images/faculties/self/physics/Dr.N.LATHA_-300x199.png' },
+                  { name: 'Mr. K. Dinesh', designation: 'Assistant Professor', qualification: 'M.Sc., B.Ed., PGDCA., D.Yoga., (PhD)', image: '/images/faculties/self/physics/Mr.K.DINESH-300x199.png' },
+                  { name: 'Mr. V. Yasodharan', designation: 'Assistant Professor', qualification: 'M.Sc., B.Ed., PGDCA., D.Yoga.', image: '/images/faculties/self/physics/Mr.V.YASODHARAN-300x199.png' }
+                ].map((faculty, idx) => (
+                  <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
+                    <div className="relative h-56 overflow-hidden flex-shrink-0">
+                      <Image
+                        src={faculty.image || '/images/faculties/placeholder-avatar.jpg'}
+                        alt={faculty.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-green/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-5 text-center flex-1 flex flex-col justify-center">
+                      <h4 className="text-lg font-bold text-brand-green mb-1">{faculty.name}</h4>
+                      <p className="text-sm font-semibold text-emerald-500 mb-1">{faculty.designation}</p>
+                      <p className="text-xs text-gray-600">{faculty.qualification}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -696,7 +756,7 @@ export default function BScPhysicsPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white" id="faq">
+        <section className="py-16 bg-brand-cream" id="faq">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <RevealSection>

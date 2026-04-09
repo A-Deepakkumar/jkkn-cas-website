@@ -69,49 +69,44 @@ export default function PhDTamilPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden py-12" style={{ backgroundColor: '#eaf1e2' }}>
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-green via-emerald-600 to-brand-green"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.15)_0%,transparent_50%)]"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-gradient-to-t from-white to-transparent"></div>
-
         <div className="container mx-auto px-4 relative z-10">
           <RevealSection>
             <div className="max-w-4xl mx-auto text-center">
-              <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30 text-white">
-                <GraduationCap className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/90 text-gray-900">
+                <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Doctoral Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Doctor of Philosophy (Ph.D) in{' '}
                 <span className="text-brand-green">
                   Tamil
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl font-medium mb-6 text-white/95">
+              <p className="text-xl md:text-2xl font-medium mb-6 text-gray-700">
                 Advanced Research in Tamil Language, Literature & Linguistics
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <Clock className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <Clock className="w-5 h-5 text-brand-green" />
                   <span>3-5 Years Duration</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <FileText className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <FileText className="w-5 h-5 text-brand-green" />
                   <span>Full-time / Part-time</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <Users className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <Users className="w-5 h-5 text-brand-green" />
                   <span>Research Programme</span>
                 </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-brand-green px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="#research-areas" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white text-white hover:text-brand-green border-2 border-white/30 hover:border-white px-7 py-3 rounded-lg font-semibold backdrop-blur-sm transition-all">
+                <a href="#research-areas" className="inline-flex items-center gap-2 bg-white/70 hover:bg-brand-green text-gray-900 hover:text-white border-2 border-white/80 hover:border-brand-green px-7 py-3 rounded-lg font-semibold backdrop-blur-sm transition-all">
                   View Research Areas
                 </a>
               </div>
@@ -182,7 +177,7 @@ export default function PhDTamilPage() {
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 1952
                 </span>
               </div>
             </RevealSection>
@@ -532,34 +527,13 @@ export default function PhDTamilPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Research+Excellence"
-                  alt="Research Excellence"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={50} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Research Scholars</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={15} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Research Guides</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -620,15 +594,15 @@ export default function PhDTamilPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Meenakshi Sundaram', designation: 'Research Supervisor', qualification: 'Ph.D. in Classical Tamil Literature' },
-                { name: 'Dr. Karthikeyan Raman', designation: 'Research Supervisor', qualification: 'Ph.D. in Tamil Linguistics' },
-                { name: 'Dr. Lakshmi Priya', designation: 'Research Supervisor', qualification: 'Ph.D. in Modern Tamil Literature' },
-                { name: 'Dr. Anandan Pillai', designation: 'Research Supervisor', qualification: 'Ph.D. in Comparative Dravidian Studies' }
+                { name: 'Dr. S. Uma', designation: 'Associate Professor & Head', qualification: 'M.A., M.Phil., Ph.D.', image: '/images/faculties/aided/tamil/Dr.-S.-Uma-240x300.png' },
+                { name: 'Mrs. S. Umarani', designation: 'Assistant Professor', qualification: 'M.A., M.Phil., B.Ed., PGDCA', image: '/images/faculties/aided/tamil/Mrs.-S.-Umarani-240x300.png' },
+                { name: 'Mr. A. R. Sathiyaprakash', designation: 'Assistant Professor', qualification: 'M.A., B.Ed., NET., SET., PGDTTM', image: '/images/faculties/aided/tamil/Mr.-A.-R.-Sathiyaprakash-240x300.png' },
+                { name: 'Dr. D. Sathiya', designation: 'Assistant Professor', qualification: 'M.A., M.A (Ling)., M.Phil., Ph.D. (SET)', image: '/images/faculties/aided/tamil/Dr.-D.-Sathiya-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"

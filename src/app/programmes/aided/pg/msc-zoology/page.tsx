@@ -81,7 +81,7 @@ export default function MScZoologyPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Master of Science in{' '}
                 <span className="text-brand-green">
                   Zoology
@@ -107,7 +107,7 @@ export default function MScZoologyPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-brand-green px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-brand-green px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -128,7 +128,7 @@ export default function MScZoologyPage() {
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '10:1', title: 'Learner-Facilitator Ratio', desc: 'Personalized mentorship' },
               { icon: <Microscope className="w-7 h-7" />, stat: '100%', title: 'Research Oriented', desc: 'Dissertation project' },
-              { icon: <Award className="w-7 h-7" />, stat: '₹4.5L+', title: 'Average Package', desc: 'Competitive starting salary' },
+              { icon: <Award className="w-7 h-7" />, stat: '₹6.5L+', title: 'Average Package', desc: 'Competitive starting salary' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
                 <GlassCard className="p-6 text-center">
@@ -182,7 +182,7 @@ export default function MScZoologyPage() {
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 1952
                 </span>
               </div>
             </RevealSection>
@@ -219,7 +219,7 @@ export default function MScZoologyPage() {
                 {
                   icon: <FileText className="w-8 h-8 text-white" />,
                   title: 'Eligible Degrees',
-                  items: ['B.Sc Zoology (Primary eligibility)', 'B.Sc Life Sciences with Zoology major', 'B.Sc Biotechnology / Microbiology', 'B.Sc Biochemistry / Genetics']
+                  items: ['B.Sc Zoology (Primary eligibility)']
                 },
                 {
                   icon: <BookOpen className="w-8 h-8 text-white" />,
@@ -275,8 +275,8 @@ export default function MScZoologyPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -290,11 +290,25 @@ export default function MScZoologyPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Biosystematics & Taxonomy', 'Comparative Animal Physiology', 'Cell & Molecular Biology', 'Advanced Genetics & Cytogenetics', 'Practical: Advanced Techniques Lab I', 'Research Methodology & Biostatistics']
+                    courses: [
+                      { code: '24PZOC01', name: 'Core-I, Structure and Function of Invertebrates' },
+                      { code: '24PZOC02', name: 'Core-II, Comparative Anatomy of Vertebrates' },
+                      { code: '24PZOCP01', name: 'Core Lab I, Invertebrates and Vertebrates' },
+                      { code: '24PZOE01 / 24PZOE02', name: 'Elective-I, Molecules their Interaction to Biology / Microbiology' },
+                      { code: '24PZOE03 / 24PZOE04', name: 'Elective-II, Biostatistics / Bioinstrumentation' },
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Developmental Biology', 'Endocrinology & Reproductive Biology', 'Immunology & Immunotechnology', 'Animal Biotechnology', 'Practical: Advanced Techniques Lab II', 'Elective I: Aquatic Biology / Entomology']
+                    courses: [
+                      { code: '24PZOC03', name: 'Core-III, Cell and Molecular Biology' },
+                      { code: '24PZOC04', name: 'Core-IV, Developmental Biology' },
+                      { code: '24PZOCP02', name: 'Core Lab-II, Cell Biology and Developmental Biology' },
+                      { code: '24PZOE05 / 24PZOE06', name: 'Elective-III, Economic Entomology / Medical Parasitology' },
+                      { code: '24PZOE07 / 24PZOE08', name: 'Elective-IV, Research Methodology / Bioethics & Biosafety' },
+                      { code: '24PZOED1 / 24PZOED2', name: 'EDC-I, Poultry Farming / Apiculture' },
+                      { code: '24PHR001', name: 'Fundamental Study of Human Rights' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -302,15 +316,23 @@ export default function MScZoologyPage() {
                       <div className="bg-gradient-to-r from-brand-green to-emerald-500 text-white px-6 py-4">
                         <h4 className="text-xl font-bold">{sem.title}</h4>
                       </div>
-                      <div className="p-6">
-                        <ul className="space-y-3">
-                          {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="p-4">
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr className="border-b border-brand-green/15">
+                              <th className="text-left py-2 px-3 font-semibold text-brand-green w-[38%]">Course Code</th>
+                              <th className="text-left py-2 px-3 font-semibold text-brand-green">Course Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {sem.courses.map((course, i) => (
+                              <tr key={i} className={i % 2 === 0 ? 'bg-brand-green/5' : ''}>
+                                <td className="py-2.5 px-3 font-mono text-xs text-emerald-700 font-semibold align-top">{course.code}</td>
+                                <td className="py-2.5 px-3 text-gray-700 align-top">{course.name}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
                     </GlassCard>
                   </RevealSection>
@@ -323,11 +345,27 @@ export default function MScZoologyPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Ecology & Environmental Biology', 'Evolutionary Biology & Paleozoology', 'Wildlife Conservation & Management', 'Bioinformatics & Computational Biology', 'Practical: Ecology & Wildlife Lab', 'Elective II: Parasitology / Toxicology']
+                    courses: [
+                      { code: '24PZOC05', name: 'Core-V, Genetics' },
+                      { code: '24PZOC06', name: 'Core-VI, Evolution' },
+                      { code: '24PZOC07', name: 'Core-VII, Animal Physiology' },
+                      { code: '24PZOCP03', name: 'Core Lab Course-III, Genetics, Evolution and Animal Physiology' },
+                      { code: '24PZOE09', name: 'Elective-V, Medical Laboratory Techniques' },
+                      { code: '24PZOED3 / 24PZOED4', name: 'EDC-II, Dairy Farming / Vermiculture' },
+                      { code: '24PZOIN01', name: 'Internship / Field Survey / Industrial Activity' },
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Animal Behaviour & Neurobiology', 'Advanced Instrumentation Techniques', 'Elective III: Specialization Paper', 'Dissertation Project', 'Project Viva-Voce', 'Internship / Field Study Report']
+                    courses: [
+                      { code: '24PZOC08', name: 'Core-VIII, Immunology' },
+                      { code: '24PZOC09', name: 'Core-IX, Ecology' },
+                      { code: '24PZOCP04', name: 'Core Lab Course-IV, Immunology & Ecology' },
+                      { code: '24PZOPR1', name: 'Project Viva Voce' },
+                      { code: '24PZOE10', name: 'Elective-VI, Aquaculture' },
+                      { code: '24PZOSEC1', name: 'Skill Enhancement Course, Animal Behaviour' },
+                      { code: '24PEXA01', name: 'Extension Activity' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -335,15 +373,23 @@ export default function MScZoologyPage() {
                       <div className="bg-gradient-to-r from-brand-green to-emerald-500 text-white px-6 py-4">
                         <h4 className="text-xl font-bold">{sem.title}</h4>
                       </div>
-                      <div className="p-6">
-                        <ul className="space-y-3">
-                          {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="p-4">
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr className="border-b border-brand-green/15">
+                              <th className="text-left py-2 px-3 font-semibold text-brand-green w-[38%]">Course Code</th>
+                              <th className="text-left py-2 px-3 font-semibold text-brand-green">Course Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {sem.courses.map((course, i) => (
+                              <tr key={i} className={i % 2 === 0 ? 'bg-brand-green/5' : ''}>
+                                <td className="py-2.5 px-3 font-mono text-xs text-emerald-700 font-semibold align-top">{course.code}</td>
+                                <td className="py-2.5 px-3 text-gray-700 align-top">{course.name}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
                     </GlassCard>
                   </RevealSection>
@@ -461,7 +507,7 @@ export default function MScZoologyPage() {
       </section>
 
       {/* Learning Facilities */}
-      <section className="py-16 bg-white" id="facilities">
+      {/* <section className="py-16 bg-white" id="facilities">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -481,12 +527,7 @@ export default function MScZoologyPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Molecular Biology Laboratory', description: 'Equipped with PCR thermal cyclers, gel documentation systems, spectrophotometers, and DNA sequencing facilities for advanced genetic research.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Molecular+Biology+Lab' },
-                { title: 'Cell Culture Facility', description: 'Sterile cell culture rooms with laminar flow hoods, CO2 incubators, inverted microscopes, and cryopreservation facilities for tissue culture research.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Cell+Culture+Facility' },
-                { title: 'Bioinformatics Center', description: 'High-performance computing facility with bioinformatics software suites, molecular modeling tools, and access to global biological databases.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Bioinformatics+Center' },
-                { title: 'Animal House Facility', description: 'Modern animal house with controlled environment for experimental research following ethical guidelines and CPCSEA regulations.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Animal+House' },
-                { title: 'Research Library', description: 'Extensive collection of journals, books, and digital resources with access to academic databases for literature review and research.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Research+Library' },
-                { title: 'Smart Seminar Hall', description: 'Technology-enabled seminar hall for presentations, conferences, and interactive sessions with video conferencing facilities.', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Seminar+Hall' }
+                { title: 'Research Lab', description: 'Extensive collection of journals, books, and digital resources with access to academic databases for literature review and research.', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Research+Library' },
               ].map((facility, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group">
@@ -508,41 +549,20 @@ export default function MScZoologyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-16 bg-brand-cream" id="why-choose">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Campus+Life"
-                  alt="Campus Life"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -603,15 +623,20 @@ export default function MScZoologyPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Kavitha Ramesh', designation: 'Head of Department', qualification: 'Ph.D. in Molecular Biology' },
-                { name: 'Dr. Senthil Kumar M', designation: 'Associate Professor', qualification: 'Ph.D. in Wildlife Biology' },
-                { name: 'Dr. Lakshmi Priya S', designation: 'Assistant Professor', qualification: 'Ph.D. in Animal Biotechnology' },
-                { name: 'Dr. Arjun Prakash', designation: 'Assistant Professor', qualification: 'Ph.D. in Ecology & Conservation' }
+                { name: 'Dr. S. Umavathi', designation: 'Assistant Professor & Head', qualification: 'M.Sc., Ph.D., PGDCA.', image: '/images/faculties/aided/zoology/Dr.-S.-Umavathi-240x300.png' },
+                { name: 'Dr. Y. Thangam', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., M.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-Y.-Thangam-240x300.png' },
+                { name: 'Dr. R. Sowdeswari', designation: 'Assistant Professor', qualification: 'M.Sc., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-R.-Sowdeswari-240x300.png' },
+                { name: 'Dr. K. M. Syed Ali Fathima', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D., D.C.A.', image: '/images/faculties/aided/zoology/Dr.-K.-M.-Syed-Ali-Fathima-240x300.png' },
+                { name: 'Dr. P. Madhiyazhagan', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., B.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-P.-Madhiyazhagan-240x300.png' },
+                { name: 'Dr. S. Umamaheswari', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., B.Ed., Ph.D.', image: '/images/faculties/aided/zoology/Dr.-S.-Umamaheswari-240x300.png' },
+                { name: 'Dr. K. Shenkani', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D., PGDBI., (SET)', image: '/images/faculties/aided/zoology/Dr.-K.-Shenkani-240x300.png' },
+                { name: 'Dr. S. Kalaimani', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., M.Ed., Ph.D., DCA., (SET)', image: '/images/faculties/aided/zoology/Dr.-S.-Kalaimani-240x300.png' },
+                { name: 'Mrs. S. Kowsalya', designation: 'Assistant Professor', qualification: 'M.Sc., M.Ed., (SET)', image: '/images/faculties/aided/zoology/Mrs.-S.-Kowsalya-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -653,9 +678,9 @@ export default function MScZoologyPage() {
               {[
                 { question: 'What is the duration of the M.Sc Zoology programme?', answer: 'The M.Sc Zoology programme is a 2-year full-time postgraduate degree comprising four semesters with advanced coursework, specialized electives, and a mandatory dissertation project.' },
                 { question: 'What are the career opportunities after M.Sc Zoology?', answer: 'M.Sc Zoology graduates can pursue careers as Research Scientists, Wildlife Biologists, University Lecturers, Conservation Officers, Biotechnology Researchers, Environmental Consultants, and positions in pharmaceutical R&D. The degree also qualifies candidates for Ph.D programs and competitive examinations like CSIR-NET, GATE, and UPSC.' },
-                { question: 'What is the eligibility criteria for M.Sc Zoology admission?', answer: 'Candidates must have completed B.Sc in Zoology or equivalent degree in Life Sciences from a recognized university with minimum 50% aggregate marks (45% for reserved categories). Candidates with B.Sc in Biotechnology, Microbiology, or Biochemistry may also be eligible.' },
+                { question: 'What is the eligibility criteria for M.Sc Zoology admission?', answer: 'Candidates must have completed B.Sc in Zoology or equivalent degree in Life Sciences from a recognized university with minimum 50% aggregate marks (45% for reserved categories). ' },
                 { question: 'Is dissertation project mandatory in M.Sc Zoology?', answer: 'Yes, the dissertation project is a mandatory component of the M.Sc Zoology programme conducted in the final semester. Learners undertake independent research under faculty supervision, culminating in a thesis submission and viva-voce examination.' },
-                { question: 'What research facilities are available for M.Sc learners?', answer: 'The department provides advanced research facilities including molecular biology lab with PCR and electrophoresis equipment, cell culture facility, bioinformatics center, animal house facility, and access to scientific journals and databases for research work.' },
+                // { question: 'What research facilities are available for M.Sc learners?', answer: 'The department provides advanced research facilities including molecular biology lab with PCR and electrophoresis equipment, cell culture facility, bioinformatics center, animal house facility, and access to scientific journals and databases for research work.' },
                 { question: 'Can I pursue Ph.D after M.Sc Zoology?', answer: 'Yes, M.Sc Zoology graduates are eligible to pursue Ph.D programs in Zoology, Wildlife Biology, Biotechnology, Ecology, and related fields in Indian and international universities. Many learners also qualify for research fellowships through CSIR-NET, GATE, and other examinations.' },
                 { question: 'Are there opportunities for research publications?', answer: 'Yes, learners are encouraged to publish their research work in peer-reviewed journals. The department supports learners in preparing manuscripts, participating in conferences, and presenting research papers at national and international symposia.' },
                 { question: 'What is the placement scenario for M.Sc Zoology graduates?', answer: 'M.Sc Zoology graduates have excellent placement opportunities in research institutions, pharmaceutical companies, biotechnology firms, environmental agencies, and academic institutions. The placement cell provides training, internship opportunities, and campus recruitment drives to facilitate career placement.' }
@@ -714,7 +739,7 @@ export default function MScZoologyPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-brand-cream">
+      {/* <section className="py-16 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -768,7 +793,7 @@ export default function MScZoologyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

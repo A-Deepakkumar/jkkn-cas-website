@@ -74,9 +74,9 @@ export default function MCAPage() {
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/90 text-gray-900">
                 <GraduationCap className="w-4 h-4 text-brand-green" />
-                UGC Recognized Postgraduate Programme
+                UGC & AICTE Approval Recognized Postgraduate Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Master of Computer Applications{' '}
                 <span className="text-brand-green">
                   (MCA)
@@ -102,7 +102,7 @@ export default function MCAPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -120,9 +120,9 @@ export default function MCAPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
-              { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC A+', title: 'Accredited Excellence', desc: 'Top-tier quality education' },
+              { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Excellence', desc: 'Top-tier quality education' },
               { icon: <Brain className="w-7 h-7" />, stat: 'AI/ML', title: 'Advanced Labs', desc: 'Cutting-edge research facilities' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '98%+', title: 'Placement Success', desc: 'Premium IT recruiters' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Success', desc: 'Premium IT recruiters' },
               { icon: <Award className="w-7 h-7" />, stat: '₹6L+', title: 'Avg. Package', desc: 'Industry-leading salaries' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -172,7 +172,7 @@ export default function MCAPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=MCA+Programme+Overview"
+                  src="/images/programmes/mca/JKKN MCA.png"
                   alt="MCA Programme Overview"
                   className="w-full h-auto"
                 />
@@ -209,17 +209,17 @@ export default function MCAPage() {
                 {
                   icon: <GraduationCap className="w-8 h-8 text-white" />,
                   title: 'Educational Qualification',
-                  items: ['BCA / B.Sc Computer Science / B.Sc IT', 'B.E. / B.Tech in any discipline', 'Any Bachelor\'s degree with Mathematics', 'Minimum 50% aggregate marks']
+                  items: ['BCA / B.Sc Computer Science / B.Sc IT', 'B.E. / B.Tech in any discipline', 'Any Bachelor\'s degree with Mathematics/Statistics/Business Mathematics at 12th level (or) at graduation level', 'Minimum 50% aggregate marks']
                 },
                 {
                   icon: <FileText className="w-8 h-8 text-white" />,
                   title: 'Academic Requirements',
-                  items: ['Mathematics at 10+2 or graduation level', 'Valid entrance exam scores (where applicable)', '45% for reserved category candidates', 'Recognized university degree']
+                  items: ['Valid entrance exam scores (where applicable)', '45% for reserved category candidates', 'Recognized university degree']
                 },
                 {
                   icon: <BookOpen className="w-8 h-8 text-white" />,
                   title: 'Documents Required',
-                  items: ['Graduation mark sheets & degree certificate', 'Transfer & migration certificates', 'Character certificate from institution', 'Valid photo ID & passport photos']
+                  items: ['10th and 12th Marksheet', 'Graduation mark sheets & degree certificate', 'Transfer & migration certificates', 'Conduct certificate from institution', 'Valid photo ID & passport size photos', 'Community Certificate']
                 }
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 150}>
@@ -313,8 +313,8 @@ export default function MCAPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -328,11 +328,40 @@ export default function MCAPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Advanced Data Structures & Algorithms', 'Object-Oriented Programming with Java', 'Database Management Systems', 'Computer Networks & Security', 'Discrete Mathematics & Statistics', 'Practical: Programming & Database Lab']
+                    subjects: [
+                      { code: '24PCAC01', name: 'Core I: Discrete Mathematics' },
+                      { code: '24PCAC02', name: 'Core II: Linux and Shell Programming' },
+                      { code: '24PCAC03', name: 'Core III: Python Programming' },
+                      { code: '24PCACP01', name: 'Core IV Lab \u2013 I: Linux and Shell Programming Lab' },
+                      { code: '24PCACP02', name: 'Core V Lab \u2013 II: Python Programming Lab' },
+                      { code: '24PCAE01', name: 'Elective \u2013 I: Data Engineering and Management' },
+                      { code: '24PCAE02', name: 'Elective \u2013 I: Architecture and Frameworks' },
+                      { code: '24PCAE03', name: 'Elective \u2013 I: Software Development Technologies' },
+                      { code: '24PCAE04', name: 'Elective \u2013 I: Soft Computing' },
+                      { code: '24PCAEP01', name: 'Elective \u2013 II: Data Engineering and Management Lab' },
+                      { code: '24PCAEP02', name: 'Elective \u2013 II: Architecture and Frameworks Lab' },
+                      { code: '24PCAEP03', name: 'Elective \u2013 II: Software Development Technologies Lab' },
+                      { code: '24PCAEP04', name: 'Elective \u2013 II: Soft Computing Lab' },
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Operating Systems & Linux Administration', 'Software Engineering & Project Management', 'Web Technologies & Frameworks', 'Python Programming & Data Analysis', 'Cloud Computing Fundamentals', 'Practical: Web Development & Cloud Lab']
+                    subjects: [
+                      { code: '24PCAC04', name: 'Core VI: Data Structures and Algorithms' },
+                      { code: '24PCAC05', name: 'Core VII: Data Mining and Warehousing' },
+                      { code: '24PCACP03', name: 'Core VIII Lab III: Data Structures and Algorithms Lab' },
+                      { code: '24PCACP04', name: 'Core IX Industry Dynamics Technology \u2013 I: Data Visualisation Lab (Self-Study Course)' },
+                      { code: '24PCAE05', name: 'Elective \u2013 III: Internet of Things' },
+                      { code: '24PCAE06', name: 'Elective \u2013 III: Computer Vision' },
+                      { code: '24PCAE07', name: 'Elective \u2013 III: Cyber Security' },
+                      { code: '24PCAE08', name: 'Elective \u2013 III: Block Chain Technologies' },
+                      { code: '24PCAEP05', name: 'Elective \u2013 IV: Internet of Things Lab' },
+                      { code: '24PCAEP06', name: 'Elective \u2013 IV: Computer Vision Lab' },
+                      { code: '24PCAEP07', name: 'Elective \u2013 IV: Cyber Security Lab' },
+                      { code: '24PCAEP08', name: 'Elective \u2013 IV: Block Chain Technologies Lab' },
+                      { code: '24P--ED-', name: 'Extra Disciplinary Course [EDC] \u2013 I' },
+                      { code: '24PHR001', name: 'Fundamental Study of Human Rights' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -343,9 +372,9 @@ export default function MCAPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="flex items-start gap-3 text-gray-700">
+                              <span className="inline-block bg-brand-green/10 text-brand-green text-xs font-mono font-semibold px-2 py-0.5 rounded mt-0.5 flex-shrink-0">{subject.code}</span>
+                              <span className="text-sm">{subject.name}</span>
                             </li>
                           ))}
                         </ul>
@@ -361,11 +390,33 @@ export default function MCAPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Artificial Intelligence & Machine Learning', 'Big Data Analytics & Hadoop Ecosystem', 'Mobile Application Development', 'DevOps & Agile Methodologies', 'Elective I (Specialization Course)', 'Practical: AI/ML & Mobile App Lab']
+                    subjects: [
+                      { code: '24PCAC06', name: 'Core X: Advanced Java Programming' },
+                      { code: '24PCAC07', name: 'Core XI: Web Technology' },
+                      { code: '24PCAC08', name: 'Core XII: Advanced Machine Learning' },
+                      { code: '24PCACP05', name: 'Core XIII Lab \u2013 IV: Advanced Java Programming Lab' },
+                      { code: '24PCACP06', name: 'Core XIV Lab \u2013 V: Web Technology Lab' },
+                      { code: '24PCAE09', name: 'Elective \u2013 V: Social Networks' },
+                      { code: '24PCAE10', name: 'Elective \u2013 V: High Performance Computing' },
+                      { code: '24PCAE11', name: 'Elective \u2013 V: Digital Marketing' },
+                      { code: '24PCAE12', name: 'Elective \u2013 V: Agile Methodologies' },
+                      { code: '24P--ED-', name: 'Extra Disciplinary Course [EDC] \u2013 II' },
+                      { code: '24PINT001', name: 'Internship / Industrial Activity' },
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Deep Learning & Neural Networks', 'Cybersecurity & Ethical Hacking', 'Elective II (Specialization Course)', 'Industry Internship (8-12 Weeks)', 'Research Dissertation & Viva', 'Comprehensive Project']
+                    subjects: [
+                      { code: '24PCAC09', name: 'Core XV: Dot Net Programming' },
+                      { code: '24PCAC10', name: 'Core XVI: Big Data Analytics' },
+                      { code: '24PCAPR1', name: 'Project Work and Viva-Voce' },
+                      { code: '24PCAEP09', name: 'Elective \u2013 VI: Social Networks Lab' },
+                      { code: '24PCAEP10', name: 'Elective \u2013 VI: High Performance Computing Lab' },
+                      { code: '24PCAEP11', name: 'Elective \u2013 VI: Advanced Machine Learning Lab' },
+                      { code: '24PCAEP12', name: 'Elective \u2013 VI: Dot Net Programming Lab' },
+                      { code: '24PCASE01', name: 'Skill Enhancement Course \u2013 Lab: Generative AI Tools' },
+                      { code: '24PEXA01', name: 'Extension Activity' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -376,9 +427,9 @@ export default function MCAPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="flex items-start gap-3 text-gray-700">
+                              <span className="inline-block bg-brand-green/10 text-brand-green text-xs font-mono font-semibold px-2 py-0.5 rounded mt-0.5 flex-shrink-0">{subject.code}</span>
+                              <span className="text-sm">{subject.name}</span>
                             </li>
                           ))}
                         </ul>
@@ -519,9 +570,6 @@ export default function MCAPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: 'AI/ML Research Lab', description: 'High-performance computing cluster with GPU workstations for deep learning, TensorFlow, and PyTorch development', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=AI+ML+Lab' },
-                { title: 'Cloud Computing Lab', description: 'AWS, Azure, and GCP certified lab with enterprise-grade virtualization and container orchestration platforms', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Cloud+Lab' },
-                { title: 'Security Operations Center', description: 'Advanced cybersecurity lab with penetration testing tools, SIEM systems, and ethical hacking environments', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Security+Lab' },
-                { title: 'Big Data Analytics Lab', description: 'Hadoop cluster with Spark, Kafka, and data visualization tools for large-scale data processing projects', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Big+Data+Lab' },
                 { title: 'Digital Resource Center', description: 'Access to IEEE, ACM digital libraries, O\'Reilly Learning, and research databases for academic excellence', image: 'https://placehold.co/400x200/059669/FFFFFF?text=Digital+Library' },
                 { title: 'Innovation & Startup Hub', description: 'Incubation center with mentorship programs, funding support, and industry collaboration opportunities', image: 'https://placehold.co/400x200/0b6d41/FFFFFF?text=Innovation+Hub' }
               ].map((facility, idx) => (
@@ -552,34 +600,13 @@ export default function MCAPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Why+Choose+MCA"
-                  alt="Why Choose MCA"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -597,9 +624,9 @@ export default function MCAPage() {
 
               <div className="space-y-4">
                 {[
-                  { title: 'NAAC A+ Accredited Excellence', description: 'Top-tier recognition ensuring quality education, superior infrastructure, and academic standards' },
+                  { title: 'NAAC  Accredited Excellence', description: 'Top-tier recognition ensuring quality education, superior infrastructure, and academic standards' },
                   { title: 'Industry-Driven Curriculum', description: 'Curriculum co-designed with tech industry leaders covering AI, cloud, and emerging technologies' },
-                  { title: 'Premium Placements', description: '98%+ placement rate with average packages of 6+ LPA and top recruiters from Fortune 500 companies' },
+                  { title: 'Premium Placements', description: '95% placement rate with average packages of 6+ LPA and top recruiters from Fortune 500 companies' },
                   { title: 'Expert Learning Facilitators', description: 'PhD-qualified and industry-experienced Learning Facilitators with active research contributions' },
                   { title: 'Global Industry Connections', description: 'MoUs with leading tech companies, international certifications, and global internship opportunities' }
                 ].map((reason, idx) => (
@@ -640,15 +667,15 @@ export default function MCAPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Rajesh Kumar', designation: 'Head of Department', qualification: 'Ph.D. in Computer Science' },
-                { name: 'Dr. Priya Sundaram', designation: 'Associate Professor', qualification: 'Ph.D. in AI & ML' },
-                { name: 'Dr. Vikram Subramanian', designation: 'Assistant Professor', qualification: 'Ph.D. in Cloud Computing' },
-                { name: 'Ms. Anitha Ramachandran', designation: 'Assistant Professor', qualification: 'M.Tech., NET Qualified' }
+                { name: 'Dr. S. Aranganayagi', designation: 'Head of Department', qualification: 'M.C.A., Ph.D.', image: '/images/faculties/aided/Dr.-S.-Aranganayagi-240x300.png' },
+                { name: 'Dr. E. Haripriya', designation: 'Assistant Professor', qualification: 'M.C.A., M.Phil., M.E., Ph.D.,NET', image: '/images/faculties/aided/Dr.-E.-Haripriya-240x300.png' },
+                { name: 'Mrs. K. Veena', designation: 'Assistant Professor', qualification: 'M.C.A., M.Phil., SET', image: '/images/faculties/aided/Mrs.-K.-Veena-240x300.png' },
+                { name: 'Dr. V. Sasirekha', designation: 'Assistant Professor', qualification: 'M.C.A., M.Phil., Ph.D.', image: '/images/faculties/aided/Dr.-V.-Sasirekha-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -688,11 +715,11 @@ export default function MCAPage() {
 
             <div className="space-y-4">
               {[
-                { question: 'What is the duration of the MCA programme?', answer: 'The MCA programme is a 2-year full-time postgraduate degree comprising four semesters. The curriculum includes advanced coursework in the first three semesters, followed by a mandatory industry internship (8-12 weeks) and research dissertation in the final semester. This structure ensures comprehensive theoretical knowledge along with practical industry experience.' },
+                { question: 'What is the duration of the MCA programme?', answer: 'The MCA programme is a 2-year full-time postgraduate degree comprising four semesters. The curriculum includes advanced coursework in the first three semesters, followed by a mandatory industry internship 15days and research dissertation in the final semester. This structure ensures comprehensive theoretical knowledge along with practical industry experience.' },
                 { question: 'What is the eligibility for MCA admission?', answer: 'Candidates must have completed BCA, B.Sc Computer Science, B.Sc Information Technology, B.E./B.Tech, or any bachelor\'s degree from a recognized university with Mathematics at 10+2 or graduation level. Minimum aggregate marks of 50% (45% for reserved categories) are required. Candidates with relevant programming experience are given preference during the selection process.' },
                 { question: 'How is MCA different from BCA?', answer: 'MCA is a postgraduate programme offering advanced specializations, research opportunities, and deeper technical expertise. While BCA provides foundational computer application knowledge, MCA focuses on advanced topics like AI/ML, cloud architecture, and software engineering. MCA graduates typically command 40-60% higher salaries, qualify for senior technical and managerial positions, and can pursue doctoral studies or research careers.' },
                 { question: 'What are the career prospects after MCA?', answer: 'MCA graduates have excellent career prospects with opportunities as Software Architects, AI/ML Engineers, Data Scientists, Cloud Solutions Architects, Technical Project Managers, and Cybersecurity Analysts. Average starting packages range from 6-10 LPA, with top performers receiving 15-25 LPA offers from leading product companies. Graduates can also pursue higher education (Ph.D.) or start technology ventures.' },
-                { question: 'Is industry internship mandatory in MCA?', answer: 'Yes, a mandatory 8-12 week industry internship is an integral part of our MCA programme. The internship provides hands-on experience in real-world projects, industry exposure, and networking opportunities. Many Learners receive pre-placement offers from their internship companies. The placement cell assists in securing internships with leading IT companies, startups, and research organizations.' },
+                { question: 'Is industry internship mandatory in MCA?', answer: 'Yes, a mandatory 15days industry internship is an integral part of our MCA programme. The internship provides hands-on experience in real-world projects, industry exposure, and networking opportunities. Many Learners receive pre-placement offers from their internship companies. The placement cell assists in securing internships with leading IT companies, startups, and research organizations.' },
                 { question: 'Can I pursue MCA without computer science background?', answer: 'Yes, candidates from non-computer science backgrounds can pursue MCA if they have studied Mathematics at 10+2 or graduation level. The programme includes foundational courses in the first semester to bring all Learners to a common level. However, candidates with prior programming knowledge or IT-related qualifications may find the initial transition smoother. Bridge courses and additional support are provided for Learners who need extra preparation.' }
               ].map((faq, idx) => (
                 <RevealSection key={idx} delay={idx * 60}>
@@ -748,62 +775,7 @@ export default function MCAPage() {
         </div>
       </section>
 
-      {/* Related Programmes */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <RevealSection>
-              <div className="text-center mb-12">
-                <SectionBadge text="Explore More" />
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Explore Related{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
-                    Programmes
-                  </span>
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Discover other postgraduate programmes at our college
-                </p>
-              </div>
-            </RevealSection>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { title: 'M.Sc Computer Science', description: 'Advanced research-oriented programme in theoretical and applied computer science', duration: '2 Years', image: 'https://placehold.co/400x180/0b6d41/FFFFFF?text=MSc+CS' },
-                { title: 'M.Sc Data Analytics', description: 'Comprehensive programme in big data, machine learning, and business intelligence', duration: '2 Years', image: 'https://placehold.co/400x180/059669/FFFFFF?text=MSc+DA' },
-                { title: 'M.Sc Mathematics', description: 'Advanced mathematical theories with computational applications and research focus', duration: '2 Years', image: 'https://placehold.co/400x180/0b6d41/FFFFFF?text=MSc+Math' }
-              ].map((programme, idx) => (
-                <RevealSection key={idx} delay={idx * 150}>
-                  <a href="#" className="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group">
-                    <div className="relative h-44 overflow-hidden">
-                      <img
-                        src={programme.image}
-                        alt={programme.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-green/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-brand-green mb-2 group-hover:text-emerald-500 transition-colors">{programme.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{programme.description}</p>
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{programme.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          <span>Full-time</span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

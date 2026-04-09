@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { BookOpen, Users, Award, Briefcase, GraduationCap, Building2, CheckCircle2, Clock, FileText, Globe, ChevronDown, ArrowRight, Sparkles, Target, Palette, Scissors, Ruler, Shirt, PenTool, Layers, TrendingUp, Calendar, UserCheck, DollarSign, Database, LineChart } from 'lucide-react';
+import Marquee from '@/components/ui/Marquee';
 
 /* ─── Scroll-reveal hook ─── */
 function useScrollReveal() {
@@ -107,10 +108,10 @@ export default function BSCTextileFashionDesigningPage() {
             "description": "A comprehensive 3-year undergraduate programme combining creative design thinking with technical textile knowledge, covering fashion illustration, garment construction, CAD, merchandising, and sustainable fashion practices.",
             "provider": {
               "@type": "CollegeOrUniversity",
-              "name": "J.K.K. Nattraja College of Arts and Science",
+              "name": "JKKN College of Arts and Science",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Kumarapalayam",
+                "addressLocality": "Komarapalayam",
                 "addressRegion": "Tamil Nadu",
                 "addressCountry": "India"
               }
@@ -132,7 +133,7 @@ export default function BSCTextileFashionDesigningPage() {
                   <GraduationCap className="w-4 h-4 text-brand-green" />
                   UGC Recognized Programme
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                   Bachelor of Science in{' '}
                   <span className="text-brand-green">
                     Textile and Fashion Designing
@@ -158,7 +159,7 @@ export default function BSCTextileFashionDesigningPage() {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                  <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     Apply Now
                     <ArrowRight className="w-4 h-4" />
                   </a>
@@ -178,7 +179,7 @@ export default function BSCTextileFashionDesigningPage() {
               {[
                 { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited', desc: 'Quality assured education' },
                 { icon: <Palette className="w-7 h-7" />, stat: 'Design', title: 'Studios', desc: 'State-of-art facilities' },
-                { icon: <Briefcase className="w-7 h-7" />, stat: '90%+', title: 'Placement', desc: 'Top fashion brands' },
+                { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement', desc: 'Top fashion brands' },
                 { icon: <Sparkles className="w-7 h-7" />, stat: 'Fashion', title: 'Shows & Events', desc: 'Annual exhibitions' },
               ].map((card, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
@@ -228,13 +229,13 @@ export default function BSCTextileFashionDesigningPage() {
               <RevealSection className="lg:col-span-2" delay={200}>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Fashion+Design"
+                    src="/images/programmes/tfd/JKKN B.Sc Textile and Fashion Designing.png"
                     alt="Fashion Design"
                     className="w-full h-auto"
                   />
-                  <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                    Since 1954
-                  </span>
+                  {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                    Since 1952
+                  </span> */}
                 </div>
               </RevealSection>
             </div>
@@ -265,33 +266,20 @@ export default function BSCTextileFashionDesigningPage() {
                   {
                     icon: <Award className="w-8 h-8 text-white" />,
                     title: 'Basic Eligibility',
-                    items: ['10+2 or equivalent from a recognized board', 'Minimum 50% aggregate marks']
+                    items: ['10+2 or equivalent from a recognized board', 'Minimum Passing marks']
                   },
                   {
                     icon: <BookOpen className="w-8 h-8 text-white" />,
                     title: 'Stream Acceptance',
-                    items: ['Students from Science, Commerce, or Arts streams are eligible to apply']
+                    items: ['Students from Science, Commerce, Arts and Any streams are eligible to apply']
                   },
                   {
                     icon: <UserCheck className="w-8 h-8 text-white" />,
                     title: 'Age Criteria',
-                    items: ['Candidates should be 17-25 years old at the time of admission']
+                    items: ['Candidates should be 17-45 years old at the time of admission']
                   },
-                  {
-                    icon: <FileText className="w-8 h-8 text-white" />,
-                    title: 'Selection Process',
-                    items: ['Merit-based admission with portfolio review and personal interview']
-                  },
-                  {
-                    icon: <Target className="w-8 h-8 text-white" />,
-                    title: 'Creative Aptitude',
-                    items: ['Interest in art, design, creativity, and fashion trends is essential']
-                  },
-                  {
-                    icon: <Calendar className="w-8 h-8 text-white" />,
-                    title: 'Admission Timeline',
-                    items: ['Applications open from May to July', 'Classes commencing in August']
-                  }
+
+
                 ].map((card, idx) => (
                   <RevealSection key={idx} delay={idx * 100}>
                     <GlassCard className="p-8 h-full">
@@ -357,23 +345,25 @@ export default function BSCTextileFashionDesigningPage() {
                     {
                       title: 'Semester I',
                       subjects: [
-                        { name: 'Elements of Fashion Design', code: 'TFD101' },
-                        { name: 'Textile Science Fundamentals', code: 'TFD102' },
-                        { name: 'Fashion Illustration I', code: 'TFD103' },
-                        { name: 'Pattern Making Basics', code: 'TFD104' },
-                        { name: 'Practical: Sewing Techniques', code: 'TFD105P' },
-                        { name: 'Environmental Studies', code: 'EVS101' }
+                        { name: 'General Tamil - I', code: '24UGTA01' },
+                        { name: 'General English - I', code: '24UGEN01' },
+                        { name: 'Core - I, Fiber and Yarn Science', code: '24UTFC01' },
+                        { name: 'Core - II, Basic Apparel Designing Practical', code: '24UTFCP01' },
+                        { name: 'DSE - I, Pattern Making and Grading / Basic Apparel Designing / Fashion Forecasting', code: '24UTFDE01 / 24UTFDE02 / 24UTFDE03' },
+                        { name: 'NME - I, E-Designing Practical', code: '24UTFNMP01' },
+                        { name: 'SEC - I (Foundation Course), Basic Illustration and Sketching Practical', code: '24UTFFP01' }
                       ]
                     },
                     {
                       title: 'Semester II',
                       subjects: [
-                        { name: 'History of Costumes & Textiles', code: 'TFD201' },
-                        { name: 'Fabric Study & Analysis', code: 'TFD202' },
-                        { name: 'Fashion Illustration II', code: 'TFD203' },
-                        { name: 'Garment Construction I', code: 'TFD204' },
-                        { name: 'Practical: Draping Techniques', code: 'TFD205P' },
-                        { name: 'Value Education', code: 'VAL101' }
+                        { name: 'General Tamil - II', code: '24UGTA02' },
+                        { name: 'General English - II', code: '24UGEN02' },
+                        { name: 'Core - III, Woven Fabric Science', code: '24UTFC02' },
+                        { name: 'Core - IV, Fiber to Fabric Science Practical', code: '24UTFCP02' },
+                        { name: 'DSE - II, Apparel Manufacturing Machineries and Equipments / Care and Maintenance of Textiles / Garment Accessories and Trims', code: '24UTFDE04 / 24UTFDE05 / 24UTFDE06' },
+                        { name: 'NME - II, Needle Craft and Fabric Painting Practical', code: '24UTFNMP02' },
+                        { name: 'SEC - II, Basic Pattern Making Practical', code: '24UTFSP01' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -407,23 +397,27 @@ export default function BSCTextileFashionDesigningPage() {
                     {
                       title: 'Semester III',
                       subjects: [
-                        { name: 'Surface Ornamentation I', code: 'TFD301' },
-                        { name: 'Traditional Indian Textiles', code: 'TFD302' },
-                        { name: 'Computer Aided Design (CAD)', code: 'TFD303' },
-                        { name: 'Garment Construction II', code: 'TFD304' },
-                        { name: 'Practical: Embroidery Techniques', code: 'TFD305P' },
-                        { name: 'Soft Skills Development', code: 'SKL301' }
+                        { name: 'General Tamil - III', code: '24UGTA03' },
+                        { name: 'General English - III', code: '24UGEN03' },
+                        { name: 'Core - V, Textile Wet Processing', code: '24UTFC03' },
+                        { name: 'Core - VI, Children\'s Apparel Practical', code: '24UTFCP03' },
+                        { name: 'DSE - III, Fashion Draping Practical / Fashion Business Communication / Basics of Cosmetology', code: '24UTFDEP01 / 24UTFDE07 / 24UTFDE08' },
+                        { name: 'SEC - III (Entrepreneurial Skill), Beauty Care Practical', code: '24UTFSP02' },
+                        { name: 'SEC - IV, Textile Wet Processing Practical', code: '24UTFSP03' },
+                        { name: 'Environmental Studies', code: '24UEVS01' }
                       ]
                     },
                     {
                       title: 'Semester IV',
                       subjects: [
-                        { name: 'Surface Ornamentation II', code: 'TFD401' },
-                        { name: 'Textile Dyeing & Printing', code: 'TFD402' },
-                        { name: 'Fashion Merchandising', code: 'TFD403' },
-                        { name: 'Advanced Pattern Making', code: 'TFD404' },
-                        { name: 'Practical: Print Design Lab', code: 'TFD405P' },
-                        { name: 'Extension Activities', code: 'EXT401' }
+                        { name: 'General Tamil - IV', code: '24UGTA04' },
+                        { name: 'General English - IV', code: '24UGEN04' },
+                        { name: 'Core - VII, Textile Finishing', code: '24UTFC04' },
+                        { name: 'Core - VIII, Women\'s Apparel Practical', code: '24UTFCP04' },
+                        { name: 'DSE - IV, Fashion Designing Practical / Costumes and Textiles of India / Fashion Appreciation', code: '24UTFDEP02 / 24UTFDE09 / 24UTFDE10' },
+                        { name: 'SEC - V, Fashion Designing', code: '24UTFS01' },
+                        { name: 'SEC - VI, Boutique Management', code: '24UTFS02' },
+                        { name: 'Environmental Studies', code: '24UEVS01' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -457,23 +451,26 @@ export default function BSCTextileFashionDesigningPage() {
                     {
                       title: 'Semester V',
                       subjects: [
-                        { name: 'Apparel Production Management', code: 'TFD501' },
-                        { name: 'Fashion Marketing & Branding', code: 'TFD502' },
-                        { name: 'Sustainable Fashion Design', code: 'TFD503' },
-                        { name: 'Costume Design for Media', code: 'TFD504' },
-                        { name: 'Practical: Portfolio Development', code: 'TFD505P' },
-                        { name: 'Elective: Accessory Design / Knitwear', code: 'TFD506E' }
+                        { name: 'Core - IX, Apparel Costing and Merchandising', code: '24UTFC05' },
+                        { name: 'Core - X, Knitting and Non-woven', code: '24UTFC06' },
+                        { name: 'Core - XI, Surface Embellishment and Fashion Accessories Practical', code: '24UTFCP05' },
+                        { name: 'Core - XII, Men\'s Apparel Practical', code: '24UTFCP06' },
+                        { name: 'DSE - V, Home Textile Practical / Organization of Garment Unit / Computer Application in Garment Designing', code: '24UTFDEP03 / 24UTFDE11 / 24UTFDE12' },
+                        { name: 'DSE - VI, Entrepreneurship Development / Fashion Photography / Eco Textile', code: '24UTFDE13 / 24UTFDE14 / 24UTFDE15' },
+                        { name: 'Value Education', code: '24UVED01' },
+                        { name: 'Internship Project - Viva-Voce', code: '24UTFSI01' }
                       ]
                     },
                     {
                       title: 'Semester VI',
                       subjects: [
-                        { name: 'Fashion Entrepreneurship', code: 'TFD601' },
-                        { name: 'Visual Merchandising & Retail', code: 'TFD602' },
-                        { name: 'Fashion Forecasting & Trends', code: 'TFD603' },
-                        { name: 'Industry Internship', code: 'TFD604' },
-                        { name: 'Final Collection Project', code: 'TFD605P' },
-                        { name: 'Elective: Fashion Journalism / Styling', code: 'TFD606E' }
+                        { name: 'Core - XIII, Textile Testing and Quality Control', code: '24UTFC07' },
+                        { name: 'Core - XIV, CAD in Garment Designing Practical', code: '24UTFCP07' },
+                        { name: 'Core - XV, Fashion Portfolio Presentation Viva Voce', code: '24UTFCP08' },
+                        { name: 'DSE - VII, Apparel Production Management / Technical Textiles / Fashion Marketing', code: '24UTFDE16 / 24UTFDE17 / 24UTFDE18' },
+                        { name: 'DSE - VIII, International Trade and Documentation / Industrial Engineering / Apparel Brand Management', code: '24UTFDE19 / 24UTFDE20 / 24UTFDE21' },
+                        { name: 'Professional Competency Skill, Employability Readiness (Naandi/Unnati/Quest/Izapy/IBM Skillbuild)', code: '—' },
+                        { name: 'Extension Activity', code: '24UEX01' }
                       ]
                     }
                   ].map((sem, idx) => (
@@ -636,7 +633,6 @@ export default function BSCTextileFashionDesigningPage() {
                   { title: 'Garment Construction Lab', description: 'Modern sewing lab with industrial sewing machines, overlock machines, button-hole machines, and specialized equipment for garment production.' },
                   { title: 'Textile Testing Lab', description: 'Well-equipped lab for fabric analysis, fiber identification, quality testing, and textile performance evaluation with industry-standard instruments.' },
                   { title: 'Embroidery & Print Studio', description: 'Specialized studio for surface ornamentation techniques including hand embroidery, machine embroidery, screen printing, and textile painting.' },
-                  { title: 'Fashion Resource Centre', description: 'Comprehensive library with fashion magazines, trend forecasting books, digital resources, fabric swatches, and industry publication subscriptions.' }
                 ].map((facility, idx) => (
                   <RevealSection key={idx} delay={idx * 100}>
                     <GlassCard className="p-6 group h-full">
@@ -656,45 +652,103 @@ export default function BSCTextileFashionDesigningPage() {
         {/* Why Choose JKKN */}
         <section className="py-16 bg-brand-cream">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <RevealSection>
-                <div className="text-center mb-12">
-                  <SectionBadge text="Why JKKN" />
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Why Choose JKKN for{' '}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
-                      Fashion Design?
-                    </span>
-                  </h2>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                  <Image
+                    src="/images/programmes/Campus Life.png"
+                    alt="Campus Life at JKKN"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </RevealSection>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { icon: <Users className="w-6 h-6 text-white" />, title: 'Industry-Experienced Learning Facilitators', description: 'Learn from faculty with extensive experience in fashion design, textile technology, and industry practices' },
-                  { icon: <Building2 className="w-6 h-6 text-white" />, title: 'Strong Industry Partnerships', description: 'Collaborations with leading fashion brands, textile manufacturers, and export houses for internships and placements' },
-                  { icon: <Sparkles className="w-6 h-6 text-white" />, title: 'Annual Fashion Shows', description: 'Showcase your creativity through college fashion shows, exhibitions, and participation in national design competitions' },
-                  { icon: <Globe className="w-6 h-6 text-white" />, title: 'Global Design Exposure', description: 'Access to international fashion trends, guest lectures from industry experts, and exposure to global design practices' },
-                  { icon: <TrendingUp className="w-6 h-6 text-white" />, title: 'Entrepreneurship Support', description: 'Incubation facilities and mentorship for students aspiring to launch their own fashion labels and businesses' },
-                  { icon: <Award className="w-6 h-6 text-white" />, title: 'NAAC Accreditation', description: 'Quality-assured education with government recognition and industry partnerships ensuring excellent learning outcomes' }
-                ].map((reason, idx) => (
-                  <RevealSection key={idx} delay={idx * 100}>
-                    <GlassCard className="p-6 group h-full">
-                      <div className="w-12 h-12 bg-gradient-to-br from-brand-green to-emerald-500 rounded-lg flex items-center justify-center mb-4 shadow-lg shadow-brand-green/20 group-hover:shadow-brand-green/30 transition-shadow">
+              <RevealSection delay={200}>
+                <SectionBadge text="Why JKKN" />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose JKKN for{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
+                    Fashion Design?
+                  </span>
+                </h2>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: <Users className="w-6 h-6" />, title: 'Industry-Experienced Learning Facilitators', description: 'Learn from faculty with extensive experience in fashion design, textile technology, and industry practices' },
+                    { icon: <Building2 className="w-6 h-6" />, title: 'Strong Industry Partnerships', description: 'Collaborations with leading fashion brands, textile manufacturers, and export houses for internships and placements' },
+                    { icon: <Sparkles className="w-6 h-6" />, title: 'Annual Fashion Shows', description: 'Showcase your creativity through college fashion shows, exhibitions, and participation in national design competitions' },
+                    { icon: <Globe className="w-6 h-6" />, title: 'Global Design Exposure', description: 'Access to international fashion trends, guest lectures from industry experts, and exposure to global design practices' },
+                    { icon: <TrendingUp className="w-6 h-6" />, title: 'Entrepreneurship Support', description: 'Incubation facilities and mentorship for students aspiring to launch their own fashion labels and businesses' },
+                    { icon: <Award className="w-6 h-6" />, title: 'NAAC Accreditation', description: 'Quality-assured education with government recognition and industry partnerships ensuring excellent learning outcomes' }
+                  ].map((reason, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-white/40 backdrop-blur-xl rounded-lg flex items-center justify-center flex-shrink-0 border border-white/60 text-brand-green">
                         {reason.icon}
                       </div>
-                      <h3 className="text-lg font-bold text-brand-green mb-2">{reason.title}</h3>
-                      <p className="text-gray-600 text-sm">{reason.description}</p>
-                    </GlassCard>
-                  </RevealSection>
+                      <div>
+                        <h4 className="text-lg font-bold text-brand-green mb-2">{reason.title}</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">{reason.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </RevealSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Faculty Section */}
+        <section className="py-16 bg-white" id="faculty">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <RevealSection>
+                <div className="text-center mb-12">
+                  <SectionBadge text="Faculty" />
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Our Learning{' '}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">
+                      Facilitators
+                    </span>
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Meet our experienced and dedicated department team
+                  </p>
+                </div>
+              </RevealSection>
+
+              <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
+                {[
+                  { name: 'Mr. G.Arulkumar', designation: 'Head of Department', qualification: ' M.Sc.,PGDCA.,', image: '/images/programmes/tfd/Mr.-G.Arulkumar-300x199 (1).png' },
+                  { name: 'Mrs. S.Sri Tharunya', designation: 'Assistant Professor', qualification: 'M.Sc.,', image: '/images/programmes/tfd/Mrs.-S.Sri-Tharunya-300x199 (1).png' },
+                  { name: 'Mrs. R.Sindhupriyadharshini', designation: 'Assistant Professor', qualification: 'M.Sc.,', image: '/images/programmes/tfd/Mrs.-R.Sindhupriyadharshini-300x199 (2).png' },
+                  { name: 'Mrs.Keerthika', designation: 'Assistant Professor', qualification: 'M.SC (T&FD)', image: '/images/programmes/tfd/MRS.KEERTHIKA-300x199 (1).png' },
+                  { name: 'Ms.K.Krishnapriya', designation: 'Assistant Professor', qualification: 'B.SC (T&FD)', image: '/images/programmes/tfd/MS.K.KRISHNAPRIYA-300x199 (1).png' }
+                ].map((faculty, idx) => (
+                  <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
+                    <div className="relative h-56 overflow-hidden flex-shrink-0">
+                      <Image
+                        src={faculty.image || '/images/faculties/placeholder-avatar.jpg'}
+                        alt={faculty.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-green/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-5 text-center flex-1 flex flex-col justify-center">
+                      <h4 className="text-lg font-bold text-brand-green mb-1">{faculty.name}</h4>
+                      <p className="text-sm font-semibold text-emerald-500 mb-1">{faculty.designation}</p>
+                      <p className="text-xs text-gray-600">{faculty.qualification}</p>
+                    </div>
+                  </div>
                 ))}
-              </div>
+              </Marquee>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white" id="faq">
+        <section className="py-16 bg-brand-cream" id="faq">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <RevealSection>

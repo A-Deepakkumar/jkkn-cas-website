@@ -76,7 +76,7 @@ export default function BComPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Commerce{' '}
                 <span className="text-brand-green">
                   (B.Com)
@@ -102,7 +102,7 @@ export default function BComPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -122,7 +122,7 @@ export default function BComPage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '15:1', title: 'Learner-Facilitator Ratio', desc: 'Personalized attention' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '95%+', title: 'Placement Record', desc: 'Career opportunities assured' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Career opportunities assured' },
               { icon: <Award className="w-7 h-7" />, stat: '₹4.5L', title: 'Average Package', desc: 'Competitive starting salary' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -172,13 +172,13 @@ export default function BComPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Commerce+Learning+Studio"
+                  src="/images/faculties/self/bcomca/JKKN B.Com CA (1).png"
                   alt="Commerce Learning Studio"
                   className="w-full h-auto"
                 />
-                <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
-                </span>
+                {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                  Since 1952
+                </span> */}
               </div>
             </RevealSection>
           </div>
@@ -270,8 +270,8 @@ export default function BComPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -285,11 +285,11 @@ export default function BComPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['Financial Accounting - I', 'Business Organisation', 'Business Economics - I', 'Business Mathematics', 'Business Communication', 'Environmental Studies']
+                    subjects: ['General Tamil - I', 'General English - I', 'Financial Accounting - I', 'Principles of Management', 'Business Communication', 'Indian Economic Development / Business Economics', 'Business Organisation', 'Elements of Industry 4.0']
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Financial Accounting - II', 'Business Law', 'Business Economics - II', 'Business Statistics', 'Principles of Management', 'Value Education']
+                    subjects: ['General Tamil - II', 'General English - II', 'Financial Accounting - II', 'Business Law', 'Business Environment / Insurance & Risk Management', 'International Trade', 'Advertising', 'Industrial Law']
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -318,11 +318,11 @@ export default function BComPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Corporate Accounting', 'Company Law', 'Cost Accounting - I', 'Banking Theory & Practice', 'Marketing Management', 'Computer Applications in Business']
+                    subjects: ['General Tamil - III', 'General English - III', 'Corporate Accounting I', 'Company Law', 'Business Legislation / E-Commerce', 'Business Mathematics & Statistics', 'Tally Practical', 'Capital Markets', 'Environmental Studies', 'Health & Wellness']
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Advanced Corporate Accounting', 'Cost Accounting - II', 'Income Tax Law & Practice - I', 'Financial Management', 'Human Resource Management', 'E-Commerce']
+                    subjects: ['General Tamil - IV', 'General English - IV', 'Corporate Accounting II', 'Principles of Marketing', 'Financial Services / Consumerism & Consumer Protection', 'Operations Research', 'Project Methodology', 'Commerce Practical', 'Environmental Studies']
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -351,11 +351,11 @@ export default function BComPage() {
                 {[
                   {
                     title: 'Semester V',
-                    subjects: ['Management Accounting', 'Income Tax Law & Practice - II', 'Auditing & Corporate Governance', 'Goods & Services Tax (GST)', 'Elective: Investment Analysis', 'Practical Training / Internship']
+                    subjects: ['Cost Accounting I', 'Banking Law and Practice', 'Income Tax Law and Practice I', 'Project Viva voce / Auditing and Corporate Governance', 'Financial Management / Indirect Taxation', 'Human Resource Management / Office Management & Secretarial Practice', 'Value Education', 'Summer Internship / Industrial Training']
                   },
                   {
                     title: 'Semester VI',
-                    subjects: ['Financial Markets & Services', 'Entrepreneurship Development', 'International Business', 'Business Research Methods', 'Elective: Stock Market Operations', 'Project Work']
+                    subjects: ['Cost Accounting II', 'Management Accounting', 'Income Tax Law and Practice II', 'Entrepreneurial Development / Computer Application in Business', 'Logistics and Supply Chain Management / Spreadsheet for Business', 'General Awareness for Competitive Examination', 'Extension Activity']
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -630,34 +630,13 @@ export default function BComPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Campus+Life"
-                  alt="Campus Life"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={500} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -718,15 +697,19 @@ export default function BComPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Meenakshi Sharma', designation: 'Head of Department', qualification: 'Ph.D. in Commerce, CA' },
-                { name: 'Dr. Ramesh Kumar', designation: 'Associate Professor', qualification: 'Ph.D. in Finance, CMA' },
-                { name: 'Ms. Lakshmi Patel', designation: 'Assistant Professor', qualification: 'M.Com, M.Phil., CS' },
-                { name: 'Mr. Arun Krishnan', designation: 'Assistant Professor', qualification: 'M.Com, MBA, NET' }
+                { name: 'Dr. S. Gokila', designation: 'Associate Professor & Head', qualification: 'M.Com., M.Phil., PGDCA., Ph.D.', image: '/images/faculties/aided/bcom/Dr.-S.-Gokila-240x300.png' },
+                { name: 'Dr. V. K. Sasikala', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., PGDCA', image: '/images/faculties/aided/bcom/Dr.-V.-K.-Sasikala-240x300.png' },
+                { name: 'Dr. M. Boovathi', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., PGDCA., Ph.D., NET', image: '/images/faculties/aided/bcom/Dr.-M.-Boovathi-240x300.png' },
+                { name: 'Dr. S. Thenmozhi', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., PGDCA., M.B.A., SET', image: '/images/faculties/aided/bcom/Dr.-S.-Thenmozhi-240x300.png' },
+                { name: 'Dr. L. Kavitha', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., SET', image: '/images/faculties/aided/bcom/Dr.-L.-Kavitha-240x300.png' },
+                { name: 'Dr. S. V. Ramesh', designation: 'Assistant Professor', qualification: 'M.Com., M.Phil., Ph.D., NET', image: '/images/faculties/aided/bcom/Dr.-S.-V.-Ramesh-240x300.png' },
+                { name: 'Dr. R. Mubeen', designation: 'Assistant Professor', qualification: 'M.Com (CA)., M.Phil., Ph.D.', image: '/images/faculties/aided/bcom/Dr.-R.-Mubeen-240x300.png' },
+                { name: 'Dr. S. Pavithra', designation: 'Assistant Professor', qualification: 'M.Com (CA)., B.Ed., M.Phil., Ph.D., SET', image: '/images/faculties/aided/bcom/Dr.-S.-Pavithra-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -771,7 +754,7 @@ export default function BComPage() {
                 { question: 'Can Science or Arts students pursue B.Com?', answer: 'Yes, students from any stream (Commerce, Science, or Arts) who have completed their Higher Secondary (10+2) from a recognized board are eligible to pursue B.Com. While Commerce stream students may have an advantage in foundational subjects like accountancy, students from other streams receive additional support to bridge any knowledge gaps in the first year.' },
                 { question: 'What professional courses can I pursue after B.Com?', answer: 'After B.Com, you can pursue several prestigious professional qualifications including CA (Chartered Accountancy) from ICAI, CMA (Cost and Management Accountancy) from ICMAI, CS (Company Secretary) from ICSI, CFA (Chartered Financial Analyst), MBA, M.Com, CFP (Certified Financial Planner), and ACCA. Our department provides foundation coaching support for CA and CMA courses integrated with the regular curriculum.' },
                 { question: 'Is there practical training included in the B.Com programme?', answer: 'Yes, our B.Com programme includes extensive practical training. This includes hands-on experience with accounting software like Tally Prime and SAP, practical sessions in taxation and GST filing, a mandatory internship in the fifth semester with CA firms, banks, or corporate finance departments, and project work in the final semester. We also have a finance lab with stock market simulation for investment analysis practice.' },
-                { question: 'What makes this B.Com programme different from others?', answer: 'Our B.Com programme stands out due to its industry-aligned curriculum, integrated CA/CMA foundation coaching, state-of-the-art computer and finance labs, experienced Learning Facilitators with industry expertise, strong placement cell with 95%+ placement record, and partnerships with leading CA firms, banks, and corporates for internships. We also offer specializations in Accounting & Finance, Taxation, Banking & Insurance, and Business Analytics.' },
+                { question: 'What makes this B.Com programme different from others?', answer: 'Our B.Com programme stands out due to its industry-aligned curriculum, integrated CA/CMA foundation coaching, state-of-the-art computer and finance labs, experienced Learning Facilitators with industry expertise, strong placement cell with 95% placement record, and partnerships with leading CA firms, banks, and corporates for internships. We also offer specializations in Accounting & Finance, Taxation, Banking & Insurance, and Business Analytics.' },
                 { question: 'What is the fee structure for the B.Com programme?', answer: 'The fee structure for our B.Com programme is competitive and affordable. The annual tuition fee is structured to be accessible to students from all backgrounds. Scholarships are available for meritorious students and those from economically weaker sections. For detailed fee information and scholarship details, please contact the admission office or download the fee brochure from our website.' },
                 { question: 'Are internships mandatory in the B.Com programme?', answer: 'Yes, internships are a mandatory component of the programme. Students undergo practical training in the fifth semester, typically lasting 4-6 weeks. Our placement cell assists in securing internships with reputed CA firms, banks, corporate finance departments, and other financial institutions. This hands-on experience provides valuable industry exposure and often leads to placement opportunities.' }
               ].map((faq, idx) => (
@@ -829,7 +812,7 @@ export default function BComPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-brand-cream">
+      {/* <section className="py-16 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -883,7 +866,7 @@ export default function BComPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

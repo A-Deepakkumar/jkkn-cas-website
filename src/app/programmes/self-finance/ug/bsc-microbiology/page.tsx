@@ -76,7 +76,7 @@ export default function BSCMicrobiologyPage() {
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Bachelor of Science in{' '}
                 <span className="text-brand-green">
                   Microbiology
@@ -102,7 +102,7 @@ export default function BSCMicrobiologyPage() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -122,7 +122,7 @@ export default function BSCMicrobiologyPage() {
             {[
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'NAAC', title: 'Accredited Institution', desc: 'Quality assured education' },
               { icon: <Users className="w-7 h-7" />, stat: '15:1', title: 'Learner-Facilitator Ratio', desc: 'Personalized attention' },
-              { icon: <Briefcase className="w-7 h-7" />, stat: '85%+', title: 'Placement Record', desc: 'Career opportunities assured' },
+              { icon: <Briefcase className="w-7 h-7" />, stat: '95%', title: 'Placement Record', desc: 'Career opportunities assured' },
               { icon: <Award className="w-7 h-7" />, stat: '₹4L', title: 'Average Package', desc: 'Competitive starting salary' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
@@ -172,13 +172,13 @@ export default function BSCMicrobiologyPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Microbiology+Lab"
+                  src="/images/programmes/bsc-microbiology/Bachelor of Science in Microbiology.png"
                   alt="Microbiology Laboratory"
                   className="w-full h-auto"
                 />
-                <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                {/* <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
                   Since 1995
-                </span>
+                </span> */}
               </div>
             </RevealSection>
           </div>
@@ -270,8 +270,8 @@ export default function BSCMicrobiologyPage() {
                     key={year}
                     onClick={() => setActiveYear(year)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeYear === year
-                        ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
-                        : 'bg-white text-brand-green hover:bg-brand-green/5'
+                      ? 'bg-gradient-to-r from-brand-green to-emerald-500 text-white shadow-lg shadow-brand-green/25'
+                      : 'bg-white text-brand-green hover:bg-brand-green/5'
                       }`}
                   >
                     Year {year}
@@ -285,11 +285,22 @@ export default function BSCMicrobiologyPage() {
                 {[
                   {
                     title: 'Semester I',
-                    subjects: ['General Microbiology', 'Cell Biology & Genetics', 'Biochemistry - I', 'Allied Chemistry', 'Practical: Microbiology Lab I', 'Environmental Studies']
+                    subjects: [
+                      { name: 'Fundamental of Microbiology and Microbial Diversity', code: '24UMBC01' },
+                      { name: 'Fundamental of Microbiology Practicals', code: '24UMBCP01' },
+                      { name: 'Basic and Clinical Biochemistry', code: '24UMBDE01' },
+                      { name: 'Foundation Course - Introduction to Microbial World', code: '24UMBFC01' },
+                    ]
                   },
                   {
                     title: 'Semester II',
-                    subjects: ['Bacteriology', 'Biochemistry - II', 'Biostatistics & Computer Applications', 'Allied Botany', 'Practical: Bacteriology Lab', 'Value Education']
+                    subjects: [
+                      { name: 'Microbial Physiology and Metabolism', code: '24UMBC02' },
+                      { name: 'Microbial Physiology and Metabolism Practicals', code: '24UMBCP02' },
+                      { name: 'Bioinstrumentation', code: '24UMBDE02' },
+                      { name: 'Sericulture', code: '24UMBSE01' },
+                      { name: 'AI Acceleration with Microbiology', code: '24UMBSE02' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -300,9 +311,12 @@ export default function BSCMicrobiologyPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="flex items-start justify-between gap-3 text-gray-700">
+                              <div className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">•</span>
+                                <span>{subject.name}</span>
+                              </div>
+                              <span className="flex-shrink-0 text-xs font-mono bg-brand-green/10 text-brand-green px-2 py-0.5 rounded border border-brand-green/20 mt-0.5">{subject.code}</span>
                             </li>
                           ))}
                         </ul>
@@ -318,11 +332,24 @@ export default function BSCMicrobiologyPage() {
                 {[
                   {
                     title: 'Semester III',
-                    subjects: ['Virology', 'Mycology & Phycology', 'Immunology', 'Microbial Physiology', 'Practical: Virology & Mycology Lab', 'Skill Enhancement: Bioinstrumentation']
+                    subjects: [
+                      { name: 'Molecular Biology and Microbial Genetics', code: '24UMBC03' },
+                      { name: 'Molecular Biology and Microbial Genetics Practicals', code: '24UMBCP03' },
+                      { name: 'Clinical Laboratory Technology', code: '24UMBDE03' },
+                      { name: 'Aquaculture', code: '24UMBSE03' },
+                      { name: 'Organic Farming and Biofertiliser', code: '24UMBSE04' },
+                    ]
                   },
                   {
                     title: 'Semester IV',
-                    subjects: ['Medical Microbiology', 'Food & Dairy Microbiology', 'Molecular Biology', 'Environmental Microbiology', 'Practical: Medical Microbiology Lab', 'Skill Enhancement: Diagnostic Techniques']
+                    subjects: [
+                      { name: 'Immunology and Immunotechnology', code: '24UMBC04' },
+                      { name: 'Immunology and Immunotechnology Practicals', code: '24UMBCP04' },
+                      { name: 'Food Processing Technology', code: '24UMBDE04' },
+                      { name: 'Vaccine Technology', code: '24UMBSE05' },
+                      { name: 'Apiculture', code: '24UMBSE06' },
+                      { name: 'Environmental Studies', code: '24EVS01' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -333,9 +360,12 @@ export default function BSCMicrobiologyPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="flex items-start justify-between gap-3 text-gray-700">
+                              <div className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">•</span>
+                                <span>{subject.name}</span>
+                              </div>
+                              <span className="flex-shrink-0 text-xs font-mono bg-brand-green/10 text-brand-green px-2 py-0.5 rounded border border-brand-green/20 mt-0.5">{subject.code}</span>
                             </li>
                           ))}
                         </ul>
@@ -351,11 +381,28 @@ export default function BSCMicrobiologyPage() {
                 {[
                   {
                     title: 'Semester V',
-                    subjects: ['Industrial Microbiology', 'Genetic Engineering & rDNA Technology', 'Microbial Biotechnology', 'Elective I: Pharmaceutical Microbiology', 'Practical: Industrial & Biotech Lab', 'Internship Training']
+                    subjects: [
+                      { name: 'Bacteriology and Mycology', code: '24UMBC05' },
+                      { name: 'Virology and Parasitology', code: '24UMBC06' },
+                      { name: 'Core Practical-V', code: '24UMBCP05' },
+                      { name: 'Project Viva Voce', code: '—' },
+                      { name: 'Recombinant DNA Technology', code: '24UMBDE05' },
+                      { name: 'Bio-Safety and Bioethics', code: '24UMBDE06' },
+                      { name: 'Value Education', code: '24UMBVE01' },
+                      { name: 'Internship / Industrial Visit / Field Visit', code: '—' },
+                    ]
                   },
                   {
                     title: 'Semester VI',
-                    subjects: ['Agricultural Microbiology', 'Soil & Marine Microbiology', 'Elective II: Clinical Microbiology / Bioremediation', 'Research Project & Dissertation', 'Project Viva-Voce', 'Comprehensive Practical Examination']
+                    subjects: [
+                      { name: 'Environmental and Agriculture Microbiology', code: '24UMBC07' },
+                      { name: 'Food, Dairy and Probiotic Microbiology', code: '24UMBC08' },
+                      { name: 'Core Practical-VI', code: '24UMBCP06' },
+                      { name: 'Pharmaceutical Microbiology', code: '24UMBDE07' },
+                      { name: 'Entrepreneurship and Bio-Business', code: '24UMBDE08' },
+                      { name: 'Microbial Quality Control and Testing', code: '24UMBPCS01' },
+                      { name: 'Extension Activity', code: '—' },
+                    ]
                   }
                 ].map((sem, idx) => (
                   <RevealSection key={idx} delay={idx * 150}>
@@ -366,9 +413,12 @@ export default function BSCMicrobiologyPage() {
                       <div className="p-6">
                         <ul className="space-y-3">
                           {sem.subjects.map((subject, i) => (
-                            <li key={i} className="flex items-start gap-2 text-gray-700">
-                              <span className="text-emerald-500 mt-1">•</span>
-                              <span>{subject}</span>
+                            <li key={i} className="flex items-start justify-between gap-3 text-gray-700">
+                              <div className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">•</span>
+                                <span>{subject.name}</span>
+                              </div>
+                              <span className="flex-shrink-0 text-xs font-mono bg-brand-green/10 text-brand-green px-2 py-0.5 rounded border border-brand-green/20 mt-0.5">{subject.code}</span>
                             </li>
                           ))}
                         </ul>
@@ -542,34 +592,13 @@ export default function BSCMicrobiologyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Microbiology+Department"
-                  alt="Microbiology Department"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={29} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={5000} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Active Learners</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={150} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Learning Facilitators</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -630,10 +659,9 @@ export default function BSCMicrobiologyPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Lakshmi Narayan', designation: 'Head of Department', qualification: 'Ph.D. in Microbiology' },
-                { name: 'Dr. Ramesh Kumar', designation: 'Associate Professor', qualification: 'Ph.D. in Medical Microbiology' },
-                { name: 'Ms. Priya Venkatesh', designation: 'Assistant Professor', qualification: 'M.Phil., NET Qualified' },
-                { name: 'Mr. Arun Subramanian', designation: 'Assistant Professor', qualification: 'M.Sc., GATE Qualified' }
+                { name: 'Dr.D.Hemalatha', designation: 'Head of Department', qualification: 'P.hD., Microbial Genetics' },
+                { name: 'S. Kayathri', designation: 'Assistant Professor', qualification: 'M.Sc,B.Ed,M.Phil.,Life Science' },
+                { name: 'S. Kamali', designation: 'Assistant Professor', qualification: 'M.Sc., Biochemistry' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
@@ -741,7 +769,7 @@ export default function BSCMicrobiologyPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-brand-cream">
+      {/* <section className="py-16 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -795,7 +823,7 @@ export default function BSCMicrobiologyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

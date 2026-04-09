@@ -34,9 +34,11 @@ export default function Navigation() {
   const [othersOpen, setOthersOpen] = useState(false);
   const [othersInteractionMode, setOthersInteractionMode] = useState<'hover' | 'click' | 'keyboard' | null>(null);
   const [nirfOpen, setNirfOpen] = useState(false);
+  const [nirf2026Open, setNirf2026Open] = useState(false);
   const [committeesOpen, setCommitteesOpen] = useState(false);
   const [mobileOthersExpanded, setMobileOthersExpanded] = useState(false);
   const [mobileNirfExpanded, setMobileNirfExpanded] = useState(false);
+  const [mobileNirf2026Expanded, setMobileNirf2026Expanded] = useState(false);
   const [mobileCommitteesExpanded, setMobileCommitteesExpanded] = useState(false);
 
   // Programmes Offered states
@@ -925,7 +927,7 @@ export default function Navigation() {
             <img
               src="/logo.svg"
               alt="JKKN College Logo"
-              className="h-12 md:h-20 w-12 md:w-20"
+              className="h-12 md:h-20 w-auto"
             />
           </Link>
 
@@ -1167,20 +1169,12 @@ export default function Navigation() {
                                       M.Sc Chemistry
                                     </Link>
                                     <Link
-                                      href="/programmes/aided/pg/msc-physics"
+                                      href="/programmes/aided/pg/ma-history"
                                       role="menuitem"
                                       tabIndex={0}
                                       className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
                                     >
-                                      M.Sc Physics
-                                    </Link>
-                                    <Link
-                                      href="/programmes/aided/pg/ma-english"
-                                      role="menuitem"
-                                      tabIndex={0}
-                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
-                                    >
-                                      M.A English
+                                      M.A History
                                     </Link>
                                   </div>
                                 </div>
@@ -1377,6 +1371,22 @@ export default function Navigation() {
                               {selfFinancePgOpen && (
                                 <div className="absolute left-full top-0 pl-1 w-80 z-[110]">
                                   <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                                    <Link
+                                      href="/programmes/self-finance/pg/mcom"
+                                      role="menuitem"
+                                      tabIndex={0}
+                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                                    >
+                                      M.Com
+                                    </Link>
+                                    <Link
+                                      href="/programmes/self-finance/pg/ma-english"
+                                      role="menuitem"
+                                      tabIndex={0}
+                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                                    >
+                                      M.A English
+                                    </Link>
                                     <Link
                                       href="/programmes/self-finance/pg/msc-computer-science"
                                       role="menuitem"
@@ -1760,6 +1770,14 @@ export default function Navigation() {
                     >
                       Minutes of IQAC Meeting
                     </Link>
+                    <Link
+                      href="/iqac/naac"
+                      role="menuitem"
+                      tabIndex={0}
+                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                    >
+                      NAAC
+                    </Link>
 
                     {/* IIQA Nested Submenu */}
                     <div
@@ -2135,6 +2153,16 @@ export default function Navigation() {
                     >
                       MANDATORY-DISCLOSURE
                     </Link>
+                    <a
+                      href="https://www.aicte.gov.in/feedback/index.php"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      role="menuitem"
+                      tabIndex={0}
+                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                    >
+                      AICTE Feedback
+                    </a>
                   </div>
                 </div>
               )}
@@ -2228,6 +2256,15 @@ export default function Navigation() {
                       Privacy Policy
                     </Link>
 
+                    <Link
+                      href="/gallery"
+                      role="menuitem"
+                      tabIndex={0}
+                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                    >
+                      Gallery
+                    </Link>
+
                     {/* NIRF Nested Submenu */}
                     <div
                       className="relative"
@@ -2258,6 +2295,48 @@ export default function Navigation() {
                             >
                               NIRF 2025
                             </Link>
+                            {/* NIRF 2026 Nested Submenu */}
+                            <div
+                              className="relative"
+                              onMouseEnter={() => setNirf2026Open(true)}
+                              onMouseLeave={() => setNirf2026Open(false)}
+                            >
+                              <div className="flex items-center justify-between px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition cursor-pointer text-sm">
+                                <span>NIRF 2026</span>
+                                <ChevronDown className="w-3 h-3 -rotate-90" />
+                              </div>
+
+                              {nirf2026Open && (
+                                <div className="absolute left-full top-0 pl-1 w-56 z-[120]">
+                                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                                    <Link
+                                      href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-college.pdf"
+                                      role="menuitem"
+                                      tabIndex={0}
+                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                                    >
+                                      College
+                                    </Link>
+                                    <Link
+                                      href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402- Overall.pdf"
+                                      role="menuitem"
+                                      tabIndex={0}
+                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                                    >
+                                      Overall
+                                    </Link>
+                                    <Link
+                                      href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-  Sustainable Institutions.pdf"
+                                      role="menuitem"
+                                      tabIndex={0}
+                                      className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
+                                    >
+                                      Sustainable Institution
+                                    </Link>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
                           </div>
                         </div>
                       )}
@@ -2286,7 +2365,7 @@ export default function Navigation() {
                               Internal Quality Assurance Cell
                             </Link>
                             <Link
-                              href="/documents/committees/Anti_Ragging-committee-2024.pdf"
+                              href="/documents/committees/2-Anti%20Ragging%20Committee%202025.pdf"
                               role="menuitem"
                               tabIndex={0}
                               className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
@@ -2294,7 +2373,7 @@ export default function Navigation() {
                               Anti-Ragging Committee
                             </Link>
                             <Link
-                              href="/documents/committees/Grievance-Redressal-Cell-2024.pdf"
+                              href="/documents/committees/3-Grievance-Redressal%20cell.pdf"
                               role="menuitem"
                               tabIndex={0}
                               className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
@@ -2310,7 +2389,7 @@ export default function Navigation() {
                               Student Grievance Form
                             </Link>
                             <Link
-                              href="/documents/committees/Internal-committee-2024.pdf"
+                              href="/documents/committees/4-ICC-Merged.pdf"
                               role="menuitem"
                               tabIndex={0}
                               className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
@@ -2318,7 +2397,7 @@ export default function Navigation() {
                               Internal Committee
                             </Link>
                             <Link
-                              href="/documents/committees/Institution-Industry-Cell-2024.pdf"
+                              href="/documents/committees/27-institution industry cell IIC 2025.pdf"
                               role="menuitem"
                               tabIndex={0}
                               className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
@@ -2326,7 +2405,7 @@ export default function Navigation() {
                               Institution Industry Cell
                             </Link>
                             <Link
-                              href="/documents/committees/SC-ST-Committee-2024.pdf"
+                              href="/documents/committees/5-SCST Cell.pdf"
                               role="menuitem"
                               tabIndex={0}
                               className="block px-4 py-2 text-gray-700 hover:bg-brand-green hover:text-white transition text-sm"
@@ -2342,7 +2421,7 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="#" className="text-gray-700 hover:text-brand-green transition font-bold uppercase hover:underline text-sm">
+            <Link href="/contact" className="text-gray-700 hover:text-brand-green transition font-bold uppercase hover:underline text-sm">
               Contact
             </Link>
           </div>
@@ -2549,18 +2628,11 @@ export default function Navigation() {
                                   M.Sc Chemistry
                                 </Link>
                                 <Link
-                                  href="/programmes/aided/pg/msc-physics"
+                                  href="/programmes/aided/pg/ma-history"
                                   onClick={toggleMobileMenu}
                                   className="block py-2 px-12 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                                 >
-                                  M.Sc Physics
-                                </Link>
-                                <Link
-                                  href="/programmes/aided/pg/ma-english"
-                                  onClick={toggleMobileMenu}
-                                  className="block py-2 px-12 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
-                                >
-                                  M.A English
+                                  M.A History
                                 </Link>
                               </div>
                             )}
@@ -2730,6 +2802,20 @@ export default function Navigation() {
 
                             {mobileSelfFinancePgExpanded && (
                               <div className="pb-2">
+                                <Link
+                                  href="/programmes/self-finance/pg/mcom"
+                                  onClick={toggleMobileMenu}
+                                  className="block py-2 px-12 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                                >
+                                  M.Com
+                                </Link>
+                                <Link
+                                  href="/programmes/self-finance/pg/ma-english"
+                                  onClick={toggleMobileMenu}
+                                  className="block py-2 px-12 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                                >
+                                  M.A English
+                                </Link>
                                 <Link
                                   href="/programmes/self-finance/pg/msc-computer-science"
                                   onClick={toggleMobileMenu}
@@ -3037,6 +3123,13 @@ export default function Navigation() {
                     >
                       Role / Responsibilities
                     </Link>
+                    <Link
+                      href="/iqac/naac"
+                      onClick={toggleMobileMenu}
+                      className="block py-2 px-8 text-gray-600 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                    >
+                      NAAC
+                    </Link>
 
                     {/* IIQA nested accordion */}
                     <div className="ml-4">
@@ -3232,7 +3325,7 @@ export default function Navigation() {
                 {mobileAicteExpanded && (
                   <div className="pb-2">
                     <Link
-                      href="/documents/aicte/LOA_EOA_Report_23-24.pdf"
+                      href="/documents/committees/28-LOA_EOA_merged_2026.pdf"
                       onClick={toggleMobileMenu}
                       className="block py-2 px-8 text-gray-600 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                     >
@@ -3245,6 +3338,15 @@ export default function Navigation() {
                     >
                       MANDATORY-DISCLOSURE
                     </Link>
+                    <a
+                      href="https://www.aicte.gov.in/feedback/index.php"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={toggleMobileMenu}
+                      className="block py-2 px-8 text-gray-600 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                    >
+                      AICTE Feedback
+                    </a>
                   </div>
                 )}
               </div>
@@ -3411,6 +3513,42 @@ export default function Navigation() {
                           >
                             NIRF 2025
                           </Link>
+                          {/* NIRF 2026 nested accordion */}
+                          <div className="ml-4">
+                            <button
+                              onClick={() => setMobileNirf2026Expanded(!mobileNirf2026Expanded)}
+                              className="w-full flex items-center justify-between py-2 px-4 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                            >
+                              <span>NIRF 2026</span>
+                              <ChevronDown className={`w-4 h-4 transition-transform ${mobileNirf2026Expanded ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {mobileNirf2026Expanded && (
+                              <div className="pb-2">
+                                <Link
+                                  href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-college.pdf"
+                                  onClick={toggleMobileMenu}
+                                  className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                                >
+                                  College
+                                </Link>
+                                <Link
+                                  href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402- Overall.pdf"
+                                  onClick={toggleMobileMenu}
+                                  className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                                >
+                                  Overall
+                                </Link>
+                                <Link
+                                  href="/documents/nirf/J.K.K Nataraja College of Arts & Science20260402-  Sustainable Institutions.pdf"
+                                  onClick={toggleMobileMenu}
+                                  className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
+                                >
+                                  Sustainable Institution
+                                </Link>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       )}
                     </div>
@@ -3435,14 +3573,14 @@ export default function Navigation() {
                             Internal Quality Assurance Cell
                           </Link>
                           <Link
-                            href="/documents/committees/Anti_Ragging-committee-2024.pdf"
+                            href="/documents/committees/2-Anti%20Ragging%20Committee%202025.pdf"
                             onClick={toggleMobileMenu}
                             className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                           >
                             Anti-Ragging Committee
                           </Link>
                           <Link
-                            href="/documents/committees/Grievance-Redressal-Cell-2024.pdf"
+                            href="/documents/committees/27-institution industry cell IIC 2025.pdf"
                             onClick={toggleMobileMenu}
                             className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                           >
@@ -3456,21 +3594,21 @@ export default function Navigation() {
                             Student Grievance Form
                           </Link>
                           <Link
-                            href="/documents/committees/Internal-committee-2024.pdf"
+                            href="/documents/committees/4-ICC-Merged.pdf"
                             onClick={toggleMobileMenu}
                             className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                           >
                             Internal Committee
                           </Link>
                           <Link
-                            href="/documents/committees/Institution-Industry-Cell-2024.pdf"
+                            href="/documents/committees/27-institution industry cell IIC 2025.pdf"
                             onClick={toggleMobileMenu}
                             className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                           >
                             Institution Industry Cell
                           </Link>
                           <Link
-                            href="/documents/committees/SC-ST-Committee-2024.pdf"
+                            href="/documents/committees/5-SCST Cell.pdf"
                             onClick={toggleMobileMenu}
                             className="block py-2 px-8 text-gray-500 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
                           >
@@ -3484,7 +3622,7 @@ export default function Navigation() {
               </div>
 
               <Link
-                href="#"
+                href="/contact"
                 onClick={toggleMobileMenu}
                 className="block py-3 px-4 text-gray-700 hover:bg-brand-cream hover:text-brand-green rounded-lg transition"
               >

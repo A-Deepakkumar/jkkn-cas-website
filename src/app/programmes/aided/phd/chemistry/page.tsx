@@ -68,49 +68,44 @@ export default function PhDChemistryPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden py-12" style={{ backgroundColor: '#eaf1e2' }}>
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-green via-emerald-600 to-brand-green"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.15)_0%,transparent_50%)]"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-gradient-to-t from-white to-transparent"></div>
-
         <div className="container mx-auto px-4 relative z-10">
           <RevealSection>
             <div className="max-w-4xl mx-auto text-center">
-              <span className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white text-gray-900">
+              <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/90 text-gray-900">
                 <GraduationCap className="w-4 h-4 text-brand-green" />
                 UGC Recognized Doctoral Programme
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-brand-green">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-green">
                 Doctor of Philosophy (Ph.D) in{' '}
                 <span className="text-brand-green">
                   Chemistry
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl font-medium mb-6 text-white/95">
+              <p className="text-xl md:text-2xl font-medium mb-6 text-gray-700">
                 Advanced Research in Chemical Sciences for Academic & Industrial Excellence
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <Clock className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <Clock className="w-5 h-5 text-brand-green" />
                   <span>3-5 Years Duration</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <FileText className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <FileText className="w-5 h-5 text-brand-green" />
                   <span>Full-Time / Part-Time</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 text-white">
-                  <Users className="w-5 h-5" />
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/80 text-gray-900">
+                  <Users className="w-5 h-5 text-brand-green" />
                   <span>Research Scholars</span>
                 </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#admission" className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-brand-green px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green/90 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="#research-areas" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/20 text-white border-2 border-white/80 hover:border-white px-7 py-3 rounded-lg font-semibold backdrop-blur-sm transition-all">
+                <a href="#research-areas" className="inline-flex items-center gap-2 bg-white/70 hover:bg-brand-green text-gray-900 hover:text-white border-2 border-white/80 hover:border-brand-green px-7 py-3 rounded-lg font-semibold backdrop-blur-sm transition-all">
                   Research Areas
                 </a>
               </div>
@@ -127,7 +122,7 @@ export default function PhDChemistryPage() {
               { icon: <GraduationCap className="w-7 h-7" />, stat: 'UGC', title: 'Recognized Programme', desc: 'Nationally accredited' },
               { icon: <Users className="w-7 h-7" />, stat: '1:8', title: 'Scholar-Guide Ratio', desc: 'Dedicated mentorship' },
               { icon: <FlaskConical className="w-7 h-7" />, stat: '10+', title: 'Research Labs', desc: 'Advanced facilities' },
-              { icon: <Award className="w-7 h-7" />, stat: '₹31K', title: 'NET Fellowship', desc: 'Monthly stipend' },
+              { icon: <Award className="w-7 h-7" />, stat: 'Good', title: 'Career Placement', desc: 'Academia & research positions' },
             ].map((card, idx) => (
               <RevealSection key={idx} delay={idx * 100}>
                 <GlassCard className="p-6 text-center">
@@ -176,12 +171,12 @@ export default function PhDChemistryPage() {
             <RevealSection className="lg:col-span-2" delay={200}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://placehold.co/600x450/0b6d41/FFFFFF?text=Chemistry+Research+Lab"
+                  src="/images/programmes/chemistry/JKKN M.Sc Chemistry.png"
                   alt="Chemistry Research Lab"
                   className="w-full h-auto"
                 />
                 <span className="absolute top-4 right-4 bg-gradient-to-r from-brand-green to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  Since 1954
+                  Since 2020
                 </span>
               </div>
             </RevealSection>
@@ -213,7 +208,7 @@ export default function PhDChemistryPage() {
                 {
                   icon: <GraduationCap className="w-8 h-8 text-white" />,
                   title: 'Academic Qualification',
-                  items: ['M.Sc./M.Phil in Chemistry or related discipline', 'Minimum 55% aggregate marks (50% for reserved categories)', 'From recognized university', 'Biochemistry, Industrial Chemistry, Pharmaceutical Chemistry accepted']
+                  items: ['M.Sc./M.Phil in Chemistry or related discipline', 'Reserved Categories - As per Government Norms', 'From recognized university', 'Biochemistry, Industrial Chemistry, Pharmaceutical Chemistry accepted']
                 },
                 {
                   icon: <FileText className="w-8 h-8 text-white" />,
@@ -277,7 +272,7 @@ export default function PhDChemistryPage() {
                 { icon: <Atom className="w-6 h-6 text-white" />, title: 'Nanochemistry', description: 'Nanoparticle synthesis, characterization, and applications.' },
                 { icon: <Lightbulb className="w-6 h-6 text-white" />, title: 'Medicinal Chemistry', description: 'Drug design, synthesis of bioactive compounds, and pharmaceutical chemistry.' },
                 { icon: <BookOpen className="w-6 h-6 text-white" />, title: 'Polymer Chemistry', description: 'Polymer synthesis, characterization, and applications in materials science.' },
-                { icon: <Target className="w-6 h-6 text-white" />, title: 'Computational Chemistry', description: 'Molecular modeling, quantum computations, and structure-activity studies.' }
+                { icon: <Target className="w-6 h-6 text-white" />, title: 'Electrochemistry and Material Science', description: 'Study of materials using electrochemical reactions.' }
               ].map((area, idx) => (
                 <RevealSection key={idx} delay={idx * 100}>
                   <GlassCard className="relative p-6 group h-full">
@@ -357,7 +352,7 @@ export default function PhDChemistryPage() {
       </section>
 
       {/* Research Facilities */}
-      <section className="py-16 bg-brand-cream" id="facilities">
+      {/* <section className="py-16 bg-brand-cream" id="facilities">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -404,41 +399,20 @@ export default function PhDChemistryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white" id="why-choose">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <RevealSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://placehold.co/600x500/0b6d41/FFFFFF?text=Research+Campus"
-                  alt="Research Campus"
-                  className="w-full h-auto"
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
+                  src="/images/programmes/Campus Life.png"
+                  alt="Campus Life at JKKN"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-green/95 to-transparent p-8">
-                  <div className="grid grid-cols-3 gap-4 text-center text-white">
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={70} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Years of Excellence</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={50} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Research Scholars</p>
-                    </div>
-                    <div>
-                      <h4 className="text-3xl font-bold text-emerald-300 mb-1">
-                        <CountUp end={15} suffix="+" />
-                      </h4>
-                      <p className="text-xs">Research Guides</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </RevealSection>
 
@@ -499,15 +473,19 @@ export default function PhDChemistryPage() {
 
             <Marquee pauseOnHover draggable speed={30} className="[--gap:1.5rem]">
               {[
-                { name: 'Dr. Ramanathan Venkatesh', designation: 'Research Supervisor', qualification: 'Ph.D (Organic Chemistry), PDF' },
-                { name: 'Dr. Lakshmi Narayanan', designation: 'Research Supervisor', qualification: 'Ph.D (Inorganic Chemistry)' },
-                { name: 'Dr. Priya Sundaramoorthy', designation: 'Research Supervisor', qualification: 'Ph.D (Physical Chemistry)' },
-                { name: 'Dr. Kumar Selvakumar', designation: 'Research Supervisor', qualification: 'Ph.D (Analytical Chemistry)' }
+                { name: 'Dr. B. Palanisamy', designation: 'Assistant Professor & Head', qualification: 'M.Sc., Ph.D.', image: '/images/faculties/aided/chemistry/Dr.-B.-Palanisamy-240x300.png' },
+                { name: 'Dr. R. Mohan Raj', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D. (SET, NET)', image: '/images/faculties/aided/chemistry/Dr.-R.-Mohan-Raj-240x300.png' },
+                { name: 'Dr. S. Tamilselvi', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D.', image: '/images/faculties/aided/chemistry/Dr.-S.-Tamilselvi-240x300.png' },
+                { name: 'Dr. K. Kalaiselvi', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D.', image: '/images/faculties/aided/chemistry/Dr.-K.-Kalaiselvi-240x300.png' },
+                { name: 'Dr. D. Navaneethan', designation: 'Assistant Professor', qualification: 'M.Sc., Ph.D. (SET)', image: '/images/faculties/aided/chemistry/Dr.-D.-Navaneethan-240x300.png' },
+                { name: 'Dr. V. Gopalakannan', designation: 'Assistant Professor', qualification: 'M.Sc., M.Phil., Ph.D.', image: '/images/faculties/aided/chemistry/Dr.-V.-Gopalakannan-240x300.png' },
+                { name: 'Dr. G. Devagi', designation: 'Assistant Professor', qualification: 'M.Sc., Ph.D.', image: '/images/faculties/aided/chemistry/Dr.-G.-Devagi-240x300.png' },
+                { name: 'Dr. N. Madankumar', designation: 'Assistant Professor', qualification: 'M.Sc., Ph.D. (NET, GATE)', image: '/images/faculties/aided/chemistry/Dr.-N.-Madankumar-240x300.png' }
               ].map((faculty, idx) => (
                 <div key={idx} className="w-[260px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-brand-cream group flex flex-col h-[340px]">
                   <div className="relative h-56 overflow-hidden flex-shrink-0">
                     <Image
-                      src="/images/faculties/placeholder-avatar.jpg"
+                      src={faculty.image}
                       alt={faculty.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -610,7 +588,7 @@ export default function PhDChemistryPage() {
       </section>
 
       {/* Related Programmes */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <RevealSection>
@@ -664,7 +642,7 @@ export default function PhDChemistryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
